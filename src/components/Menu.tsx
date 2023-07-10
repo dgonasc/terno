@@ -1,0 +1,67 @@
+import Image from 'next/image'
+import React, { useRef } from "react"
+import Link from "next/link"
+import { SiYoutube, SiInstagram } from "react-icons/si";
+
+export default function Menu() {
+    const navRef = useRef<HTMLElement | null>(null);
+    const showNavBar = () => {
+        navRef.current?.classList.toggle('max-lg:hidden');
+    }
+
+    return (
+        <div className="m-0 border-2 border-b-gray-200">
+            <div className='flex flex-row items-center justify-between lg:px-14 xl:mr-24'>
+                <div>
+                    <Link href="/">
+                        <Image
+                        src="/logo.png"
+                        alt='Logo Terno do Binga'
+                        className='w-16 m-2 rounded-full lg:ml-5 lg:w-22'
+                        width={300}
+                        height={180}
+                        id='logo'
+                        />
+                    </Link>
+                </div>
+                <nav ref={navRef} className="text-2xl max-lg:z-50 font-xilosa max-lg:text-6xl max-lg:-top-2 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-gray-100 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
+                    <ul className="lg:flex lg:items-center lg:mt-2 lg:uppercase lg:space-x-10 drop-shadow-md max-lg:m-6 max-lg:space-y-6">
+                        <li>
+                            <Link href="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/about">
+                                Sobre
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/photos">
+                                Fotos
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/search">
+                                Pesquisa
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className="flex items-center ml-6 space-x-3 text-2xl max-lg:ml-16 max-lg:mt-4 lg:justify-center">
+                        <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
+                        <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
+                    </div>
+                </nav>
+                <Image
+                onClick={showNavBar}
+                src="/menu.svg"
+                alt='Menu mobile'
+                className='static cursor-pointer w-14 right-7 top-8 lg:hidden'
+                width={120}
+                height={90}
+                />
+            </div>
+        </div>
+    )
+}
+
