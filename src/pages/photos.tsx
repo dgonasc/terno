@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import fsPromises from 'fs/promises';
 import path from 'path'
-import { Key, useRef } from "react";
+import { Key } from "react";
 import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
 

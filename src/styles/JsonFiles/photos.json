@@ -2,127 +2,127 @@
     "photos": [
         {
             "id":"5",
-            "image":"/photos/5.JPG",
+            "image":"/photos/5.jpg",
             "description":"Cortejo de Carnaval Humaitá 2023",
             "author":"@lumiguez"
         },
         {
             "id":"6",
-            "image":"/photos/6.JPG",
+            "image":"/photos/6.jpg",
             "description":"Cortejo de Carnaval Humaitá 2023",
             "author":"@lumiguez"
         },
         {
             "id":"7",
-            "image":"/photos/7.JPG",
+            "image":"/photos/7.jpg",
             "description":"Cortejo de Carnaval Humaitá 2023",
             "author":"@lumiguez"
         },
         {
             "id":"10",
-            "image":"/photos/10.JPG",
+            "image":"/photos/10.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"8",
-            "image":"/photos/8.JPG",
+            "image":"/photos/8.jpg",
             "description":"Feira Estação Carnaval na Salumeria",
             "author":"@luciano.baeta"
         },
         {
             "id":"9",
-            "image":"/photos/9.JPG",
+            "image":"/photos/9.jpg",
             "description":"Feira Estação Carnaval na Salumeria",
             "author":"@luciano.baeta"
         },
         {
             "id":"11",
-            "image":"/photos/11.JPG",
+            "image":"/photos/11.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"12",
-            "image":"/photos/12.JPG",
+            "image":"/photos/12.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"14",
-            "image":"/photos/14.JPG",
+            "image":"/photos/14.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"15",
-            "image":"/photos/15.JPG",
+            "image":"/photos/15.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"16",
-            "image":"/photos/16.JPG",
+            "image":"/photos/16.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"17",
-            "image":"/photos/17.JPG",
+            "image":"/photos/17.jpg",
             "description":"Show Anderson Miguel, banda de apoio Terno do Binga",
             "author":"@euripedesb"
         },
         {
             "id":"18",
-            "image":"/photos/18.JPG",
+            "image":"/photos/18.jpg",
             "description":"Show Anderson Miguel, banda de apoio Terno do Binga",
             "author":"@euripedesb"
         },
         {
             "id":"20",
-            "image":"/photos/20.JPG",
+            "image":"/photos/20.jpg",
             "description":"Show Anderson Miguel, banda de apoio Terno do Binga",
             "author":"@euripedesb"
         },
         {
             "id":"21",
-            "image":"/photos/21.JPG",
+            "image":"/photos/21.jpg",
             "description":"Show Anderson Miguel, banda de apoio Terno do Binga",
             "author":"@euripedesb"
         },
         {
             "id":"22",
-            "image":"/photos/22.JPG",
+            "image":"/photos/22.jpg",
             "description":"Show Anderson Miguel, banda de apoio Terno do Binga",
             "author":"@euripedesb"
         },
         {
             "id":"1",
-            "image":"/photos/1.JPG",
+            "image":"/photos/1.jpg",
             "description":"Parque da Redenção - Porto Alegre/RS",
             "author":"@jucaliano"
         },
         {
             "id":"2",
-            "image":"/photos/2.JPG",
+            "image":"/photos/2.jpg",
             "description":"Parque da Redenção - Porto Alegre/RS",
             "author":"@jucaliano"
         },
         {
             "id":"3",
-            "image":"/photos/3.JPG",
+            "image":"/photos/3.jpg",
             "description":"Parque da Redenção - Porto Alegre/RS",
             "author":"@jucaliano"
         },
         {
             "id":"4",
-            "image":"/photos/4.JPG",
+            "image":"/photos/4.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         },
         {
             "id":"13",
-            "image":"/photos/13.JPG",
+            "image":"/photos/13.jpg",
             "description":"Cortejo Terno do Binga e Anderson Miguel",
             "author":"@amarinateixeira"
         }
