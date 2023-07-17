@@ -24,7 +24,7 @@ interface TabProps {
                 <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white shadow-lg rounded-xl lg:h-36 h-14 max-lg:w-28"
                     key={index}
                     onClick={() => handleTabClick(index)}
-                    style={{backgroundColor: activeTab === index ? '#facc15' : 'white'}}
+                    style={{backgroundColor: activeTab === index ? '#FFFACD' : 'white'}}
                     // {{ fontWeight: activeTab === index ? 'bold' : 'normal' }}
                 >
                     <div className='items-center justify-center hidden w-1/3 my-2 bg-cover lg:flex rounded-xl bg-landscape'>
@@ -47,7 +47,7 @@ interface TabProps {
                 ))}
             </div>
 
-            <div className='flex justify-center m-3 max-lg:mt-0 lg:mx-24 font-noto'>
+            <div className='flex justify-center m-3 drop-shadow-xl max-lg:mt-0 lg:mx-24 font-noto'>
                 {tabs[activeTab].content}
             </div>
         </div>

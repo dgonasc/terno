@@ -8,7 +8,7 @@ export default function Home(props: { about: any; }) {
     return (
         <>
             <Menu />
-            <div className="grid flex-row mt-4 xl:flex">
+            <div className="grid flex-row mt-4 xl:flex drop-shadow-xl">
                 <div className="my-2 ml-12 md:mx-24 xl:mr-0 xl:ml-36 xl:basis-2/6">
                 {about.map((post: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; content: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) =>
                     <div key={post.id}>
@@ -21,7 +21,7 @@ export default function Home(props: { about: any; }) {
                 alt='Foto sobre'
                 width={300}
                 height={180}
-                className="relative w-full my-16 rounded-lg lg:-right-36 basis-3/6 opacity-70"
+                className="relative w-full my-16 border-2 border-yellow-400 rounded-lg lg:-right-36 basis-3/6 opacity-70"
                 />
             </div>
             <Footer />

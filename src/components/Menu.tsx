@@ -12,14 +12,14 @@ export default function Menu() {
     }
 
     return (
-        <div className="m-0 border-2 border-b-gray-200">
+        <div className="m-0 border-2 border-b-green-600">
             <div className='flex flex-row items-center justify-between lg:px-14 xl:mr-24'>
                 <div>
                     <Link href="/">
                         <Image
                         src="/logo.png"
                         alt='Logo Terno do Binga'
-                        className='w-16 m-2 rounded-full lg:ml-5 lg:w-22'
+                        className='w-16 m-2 rounded-full lg:ml-5 lg:w-22 drop-shadow-2xl'
                         width={300}
                         height={180}
                         id='logo'

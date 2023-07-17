@@ -33,7 +33,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                 <div className="w-full mb-10 h-fit">
                         <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
                             {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
-                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden bg-gray-100 shadow-2xl rounded-xl">
+                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-2xl bg-yellow-50 rounded-xl">
                                 <div className="m-1 bg-cover">
                                     <Image
                                     src={photo.image}
@@ -44,7 +44,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                     onClick={() => setIsOpen(photo.image)}
                                     />
                                 </div>
-                                <div className='text-xs text-center lg:text-sm'>
+                                <div className='text-xs text-center text-gray-600 lg:text-sm'>
                                     <p>{photo.description}</p>
                                     <p>Foto: {photo.author}</p>
                                 </div>
