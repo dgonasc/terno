@@ -47,7 +47,7 @@ interface TabProps {
                 ))}
             </div>
 
-            <div className='flex justify-center m-3 max-lg:mt-0 lg:mx-24'>
+            <div className='flex justify-center m-3 max-lg:mt-0 lg:mx-24 font-noto'>
                 {tabs[activeTab].content}
             </div>
         </div>

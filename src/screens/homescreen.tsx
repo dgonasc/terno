@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { SiYoutube, SiInstagram } from "react-icons/si";
+import { FiMail } from "react-icons/fi";
 
 
 export default function HomeScreen() {
@@ -41,8 +43,19 @@ export default function HomeScreen() {
                 muted
                 src="video_home.mov"
                 ref={videoEl}
-                className="flex object-cover w-screen m-0 shadow-2xl h-72 opacity-80"
+                className="flex object-cover w-screen m-0 shadow-2xl lg:h-96 h-60 opacity-80"
                 />
+            </div>
+            <div className="flex justify-center mx-16 my-16 text-center lg:mx-36">
+                <div className="grid font-xilosa">
+                    <h2 className="text-2xl">Contato</h2>
+                    <h3>ternodobinga@gmail.com</h3>
+                </div>
+                <div className="hidden m-5 ml-6 space-x-3 text-2xl max-lg:flex">
+                    <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
+                    <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
+                    <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
+                </div>
             </div>
         </div>
         <Footer />

@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React, { useRef } from "react"
 import Link from "next/link"
 import { SiYoutube, SiInstagram } from "react-icons/si";
+import { FiMail } from "react-icons/fi";
+
 
 export default function Menu() {
     const navRef = useRef<HTMLElement | null>(null);
@@ -28,7 +30,7 @@ export default function Menu() {
                     <ul className="lg:flex lg:items-center lg:mt-2 lg:uppercase lg:space-x-10 drop-shadow-md max-lg:m-6 max-lg:space-y-6">
                         <li>
                             <Link href="/">
-                                Home
+                                Início
                             </Link>
                         </li>
                         <li>
@@ -47,9 +49,10 @@ export default function Menu() {
                             </Link>
                         </li>
                     </ul>
-                    <div className="flex items-center ml-6 space-x-3 text-2xl max-lg:ml-16 max-lg:mt-4 lg:justify-center">
+                    <div className="flex items-center ml-12 space-x-3 text-2xl max-lg:ml-12 max-lg:mt-12 lg:justify-center drop-shadow-md">
                         <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
                         <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
+                        <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
                     </div>
                 </nav>
                 <Image

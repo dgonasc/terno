@@ -8,6 +8,12 @@ const Search = () => {
 
     const tabs = [
                 {
+                label:'Ciranda',
+                resume:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
+                content:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
+                image:'/ciranda.jpg'
+                },
+                {
                     label: 'Maracatu de Baque Solto',
                     resume:'O Maracatu Rural ou Maracatu de Baque Solto é reconhecido como um folguedo...',
                     content:'O Maracatu Rural ou Maracatu de Baque Solto é reconhecido como um folguedo que ocorre durante as...',
@@ -24,13 +30,7 @@ const Search = () => {
                     resume:'Bumba meu boi é uma festa brasileira predominante no Norte e Nordeste e encena uma narrativa popular...',
                     content:'Bumba meu boi é uma festa brasileira predominante no Norte e Nordeste e encena uma narrativa popular...',
                     image:'/boi.jpg'
-                },
-                {
-                    label:'Ciranda',
-                    resume:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
-                    content:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
-                    image:'/ciranda.jpg'
-                },
+                }
             ];
 
     return (

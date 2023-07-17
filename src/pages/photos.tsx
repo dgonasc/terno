@@ -30,20 +30,24 @@ export default function ModalPhotos(props: { photos: any; }) {
         <>
             <Menu />
             <div>
-                <div className="grid items-center justify-center h-fit">
-                        <div className="grid grid-cols-4 cursor-pointer">
-                            {photos.map((photo: { id: Key | null | undefined; image: string; }) =>
-                            <div key={photo.id} className="m-2 overflow-hidden bg-gray-100 shadow-2xl rounded-xl">
-                                    <div className="py-2 ml-1 bg-cover">
-                                        <Image
-                                        src={photo.image}
-                                        alt="Fotos"
-                                        width={300}
-                                        height={180}
-                                        className="rounded-lg bg-landscape"
-                                        onClick={() => setIsOpen(photo.image)}
-                                        />
-                                    </div>
+                <div className="w-full mb-10 h-fit">
+                        <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
+                            {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
+                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden bg-gray-100 shadow-2xl rounded-xl">
+                                <div className="m-1 bg-cover">
+                                    <Image
+                                    src={photo.image}
+                                    alt="Fotos"
+                                    width={300}
+                                    height={180}
+                                    className="rounded-lg bg-landscape"
+                                    onClick={() => setIsOpen(photo.image)}
+                                    />
+                                </div>
+                                <div className='text-xs text-center lg:text-sm'>
+                                    <p>{photo.description}</p>
+                                    <p>Foto: {photo.author}</p>
+                                </div>
                             </div>
                             )}
                         </div>
