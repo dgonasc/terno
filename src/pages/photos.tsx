@@ -9,7 +9,7 @@ import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), '/src/styles/JsonFiles/photos.json');
+    const filePath = path.join(process.cwd(), '/src/JsonFiles/photos.json');
     const jsonData = await fsPromises.readFile(filePath);
     const objectData = JSON.parse(jsonData.toString());
 

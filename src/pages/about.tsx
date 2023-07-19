@@ -38,7 +38,7 @@ import path from 'path'
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), '/src/styles/JsonFiles/about.json');
+    const filePath = path.join(process.cwd(), '/src/JsonFiles/about.json');
     const jsonData = await fsPromises.readFile(filePath);
     const objectData = JSON.parse(jsonData.toString());
 
