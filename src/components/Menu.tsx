@@ -19,7 +19,7 @@ export default function Menu() {
                         <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo.png"
                         alt='Logo Terno do Binga'
-                        className='w-16 m-2 rounded-full lg:ml-5 lg:w-22 drop-shadow-2xl'
+                        className='w-16 m-2 rounded-full lg:ml-5 lg:w-22'
                         width={300}
                         height={180}
                         id='logo'

@@ -29,10 +29,10 @@ export default function HomeScreen() {
             <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
                 <h3 className="m-5 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl">Terno do Binga</h3>
                 <p className="mb-10 text-lg max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
-                    <Link href="/about" className="p-4 text-black border-2 border-solid rounded-md shadow-lg max-sm:ml-8 max-sm:p-2 hover:opacity-60 text-md font-secondary hover:bg-corterceira/30">
-                    <button>
-                        Saiba mais
-                    </button>
+                    <Link href="/about" className="p-4 text-sm text-black border-2 border-solid rounded-md shadow-lg max-sm:ml-8 max-sm:p-2 hover:opacity-60 font-xilosa hover:bg-corterceira/30">
+                        <button>
+                            Saiba mais
+                        </button>
                     </Link>
             </div>
 
