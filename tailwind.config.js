@@ -9,12 +9,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // colors: {
-    //   'gray_binga': {
-    //     100: '#f3f4f6',
-    //     200: '#e5e7eb'
-    //   },
-    // },
     extend: {
       backgroundImage: {
         // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
