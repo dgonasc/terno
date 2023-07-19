@@ -16,15 +16,15 @@ export default function Home(props: { about: any; }) {
                         <p className="text-xl lg:text-2xl font-noto max-lg:mr-8">{post.content}</p>
                     </div>)}
                 </div>
-                <div className="lg:-right-36 basis-3/6">
+                <div className="grid ml-12 basis-3/6 lg:ml-44">
                     <Image
                     src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/sobre.jpg'
                     alt='Foto sobre'
                     width={300}
                     height={180}
-                    className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg opacity-70 lg:ml-24"
+                    className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-70 shadow-black "
                     />
-                    <h3 className="mb-10 mr-4 text-xs text-right text-gray-600 lg:text-sm lg:mr-4">Foto: @quem.e.matheus</h3>
+                    <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4">Foto: @quem.e.matheus</h3>
                 </div>
             </div>
             <Footer />

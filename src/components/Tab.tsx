@@ -21,7 +21,7 @@ interface TabProps {
         <div className='grid m-2 mt-1 lg:mt-8 lg:flex'>
             <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-lg:grid-flow-col max-lg:grid-rows-2 lg:ml-12 xl:ml-36 lg:basis-2/6'>
                 {tabs.map((tab, index) => (
-                <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white shadow-lg rounded-xl lg:h-36 h-14 max-lg:w-28"
+                <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white border-2 border-yellow-100 shadow-lg shadow-yellow-50 rounded-xl lg:h-36 h-14 max-lg:w-28"
                     key={index}
                     onClick={() => handleTabClick(index)}
                     style={{backgroundColor: activeTab === index ? '#FFFACD' : 'white'}}

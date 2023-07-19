@@ -49,7 +49,7 @@ export default function ContactForm() {
         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder='Nome' className='p-2 mt-3 border-2 border-yellow-400 rounded-lg w-72' />
         <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder='email' className='p-2 mt-3 border-2 border-yellow-400 rounded-lg w-72' />
         <textarea name="message" value={formData.message} onChange={handleChange} placeholder='mensagem' className='p-2 mt-3 border-2 border-yellow-400 rounded-lg h-36 w-72' />
-        <button type="submit" className='mx-20 mt-4 uppercase bg-yellow-100 border-2 border-yellow-400 rounded-lg drop-shadow-lg'>Enviar</button>
+        <button type="submit" className='mx-20 mt-4 uppercase bg-yellow-100 border-2 border-yellow-400 rounded-lg shadow-md shadow-yellow-100'>Enviar</button>
       </form>
   )
 }

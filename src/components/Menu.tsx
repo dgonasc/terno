@@ -27,7 +27,7 @@ export default function Menu() {
                     </Link>
                 </div>
                 <nav ref={navRef} className="text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-gray-100 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
-                    <ul className="lg:flex lg:items-center lg:mt-2 lg:uppercase lg:space-x-10 drop-shadow-md max-lg:m-6 max-lg:space-y-6">
+                    <ul className="lg:flex lg:items-center lg:mt-2 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:m-6 max-lg:space-y-6">
                         <li>
                             <Link href="/">
                                 Início

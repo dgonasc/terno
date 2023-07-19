@@ -33,7 +33,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                 <div className="w-full mb-10 h-fit">
                         <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
                             {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
-                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-2xl bg-yellow-50 rounded-xl">
+                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl">
                                 <div className="m-1 bg-cover">
                                     <Image
                                     src={photo.image}
@@ -77,7 +77,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                                 >
-                                <Dialog.Panel className="w-full max-w-xl align-middle transition-all shadow-xl rounded-2xl">
+                                <Dialog.Panel className="w-full max-w-xl align-middle transition-all shadow-xl shadow-yellow-50 rounded-2xl">
                                     <Image
                                         onClick={closeModal}
                                         className="z-50 w-screen rounded-md"
