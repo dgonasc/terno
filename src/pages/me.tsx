@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { SiYoutube, SiInstagram } from "react-icons/si";
+import Footer from "@/components/Footer"
 
 export default function me() {
     return (
@@ -75,6 +75,7 @@ export default function me() {
                     </li>
                 </ul>
             </div>
+            <Footer />
         </div>
     )
 }

@@ -3,6 +3,21 @@ import React from "react"
 import Image from "next/image"
 import Footer from "@/components/Footer"
 
+// Fetching data from the JSON file
+import fsPromises from 'fs/promises';
+import path from 'path'
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
+
+export async function getStaticProps() {
+    const filePath = path.join(process.cwd(), '/src/JsonFiles/about.json');
+    const jsonData = await fsPromises.readFile(filePath);
+    const objectData = JSON.parse(jsonData.toString());
+
+    return {
+    props: objectData
+    }
+}
+
 export default function Home(props: { about: any; }) {
     const about = props.about;
     return (
@@ -22,7 +37,7 @@ export default function Home(props: { about: any; }) {
                     alt='Foto sobre'
                     width={300}
                     height={180}
-                    className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-70 shadow-black "
+                    className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-90 shadow-black"
                     />
                     <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4">Foto: @quem.e.matheus</h3>
                 </div>
@@ -31,20 +46,3 @@ export default function Home(props: { about: any; }) {
         </>
     )
 }
-
-// Fetching data from the JSON file
-import fsPromises from 'fs/promises';
-import path from 'path'
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
-
-export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), '/src/JsonFiles/about.json');
-    const jsonData = await fsPromises.readFile(filePath);
-    const objectData = JSON.parse(jsonData.toString());
-
-    return {
-    props: objectData
-    }
-}
-
-

@@ -47,7 +47,7 @@ export default function HomeScreen() {
                 />
             </div>
             <div className="grid justify-center my-16 text-center sm:mx-16 lg:mx-36">
-                <div className="grid font-xilosa">
+                <div className="grid text-gray-600 font-xilosa">
                     <h2 className="text-2xl">Contato</h2>
                     <h3>ternodobinga@gmail.com</h3>
                 </div>

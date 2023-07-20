@@ -40,7 +40,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                     alt="Fotos"
                                     width={300}
                                     height={180}
-                                    className="rounded-lg bg-landscape"
+                                    className="rounded-lg bg-landscape hover:opacity-70"
                                     onClick={() => setIsOpen(photo.image)}
                                     />
                                 </div>
