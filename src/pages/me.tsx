@@ -8,6 +8,8 @@ export default function me() {
         <>
             <Head>
                 <title>Links - Terno do Binga</title>
+                <meta name="description" content="Checkout our cool page" key="desc" />
+                <meta property="og:title" content="Social Title for Cool Page" />
             </Head>
             <div className="h-screen bg-gradient-to-tr to-green-400 from-black">
                 <div className="grid items-center justify-center lg:ml-12">

@@ -8,6 +8,8 @@ export default function Home() {
     <>
       <Head>
         <title>Terno do Binga</title>
+        <meta name="description" content="Checkout our cool page" key="desc" />
+        <meta property="og:title" content="Social Title for Cool Page" />
       </Head>
       <Menu />
       <HomeScreen />
