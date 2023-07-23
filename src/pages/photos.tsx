@@ -44,7 +44,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                     onClick={() => setIsOpen(photo.image)}
                                     />
                                 </div>
-                                <div className='text-xs text-center text-gray-600 lg:text-sm'>
+                                <div className='mt-2 text-xs text-center text-gray-600 lg:text-sm'>
                                     <p>{photo.description}</p>
                                     <p>Foto: {photo.author}</p>
                                 </div>
