@@ -82,7 +82,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                         onClick={closeModal}
                                         className="z-50 w-screen rounded-md"
                                         src={isOpen}
-                                        height={500}
+                                        height={480}
                                         width={300}
                                         alt=""
                                     />

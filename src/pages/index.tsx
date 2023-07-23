@@ -1,3 +1,4 @@
+import ContactForm from "@/components/Email"
 import Menu from "@/components/Menu"
 import HomeScreen from "@/screens/homescreen"
 import Head from "next/head"
@@ -5,11 +6,12 @@ import Head from "next/head"
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>Terno do Binga</title>
-    </Head>
-    <Menu />
-    <HomeScreen />
+      <Head>
+        <title>Terno do Binga</title>
+      </Head>
+      <Menu />
+      <HomeScreen />
+      <ContactForm />
     </>
     )
 }

@@ -5,6 +5,7 @@ import { SiYoutube, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
 
+
 export default function Menu() {
     const navRef = useRef<HTMLElement | null>(null);
     const showNavBar = () => {
@@ -17,7 +18,7 @@ export default function Menu() {
                 <div>
                     <Link href="/">
                         <Image
-                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo.png"
+                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo-2.png"
                         alt='Logo Terno do Binga'
                         className='w-16 m-2 rounded-full lg:ml-5 lg:w-22'
                         width={300}
@@ -49,7 +50,7 @@ export default function Menu() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="/download">
                                 Download
                             </Link>
                         </li>
@@ -62,7 +63,7 @@ export default function Menu() {
                 </nav>
                 <Image
                 onClick={showNavBar}
-                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/menu.svg"
+                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/menu.png"
                 alt='Menu mobile'
                 className='static cursor-pointer w-14 top-8 lg:hidden'
                 width={120}

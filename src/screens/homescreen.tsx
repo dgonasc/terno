@@ -3,7 +3,6 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { SiYoutube, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
-import ContactForm from "@/components/Email";
 
 
 export default function HomeScreen() {
@@ -41,12 +40,13 @@ export default function HomeScreen() {
                 playsInline
                 loop
                 muted
-                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mov"
+                preload="metadata"
+                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mp4"
                 ref={videoEl}
-                className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-80"
+                className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-70"
                 />
             </div>
-            <div className="grid justify-center my-16 text-center sm:mx-16 lg:mx-36">
+            <div className="grid justify-center my-4 text-center sm:mx-16 lg:mx-36">
                 <div className="grid text-gray-600 font-xilosa">
                     <h2 className="text-2xl">Contato</h2>
                     <h3>ternodobinga@gmail.com</h3>
@@ -56,18 +56,9 @@ export default function HomeScreen() {
                     <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
                     <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
                 </div>
-                <ContactForm />
             </div>
         </div>
         <Footer />
         </>
     )
 }
-
-
-
-
-function setBody(arg0: string) {
-    throw new Error("Function not implemented.");
-}
-

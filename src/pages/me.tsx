@@ -50,7 +50,7 @@ export default function me() {
                     <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
                         <Link href="/" className="flex items-center justify-center mx-44 max-lg:mx-20">
                             <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo.png"
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo-2.png"
                             alt='Logo Terno do Binga'
                             className='w-12 m-1 rounded-full -ml-7'
                             width={300}

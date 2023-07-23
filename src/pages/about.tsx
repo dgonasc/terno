@@ -33,7 +33,7 @@ export default function Home(props: { about: any; }) {
                 </div>
                 <div className="grid ml-12 basis-3/6 lg:ml-44">
                     <Image
-                    src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/sobre.jpg'
+                    src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/sobre-2.jpg'
                     alt='Foto sobre'
                     width={300}
                     height={180}
