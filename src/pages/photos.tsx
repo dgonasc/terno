@@ -7,6 +7,7 @@ import path from 'path'
 import { Key } from "react";
 import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
+import Head from "next/head"
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), '/src/JsonFiles/photos.json');
@@ -28,6 +29,9 @@ export default function ModalPhotos(props: { photos: any; }) {
 
     return (
         <>
+            <Head>
+                <title>Fotos - Terno do Binga</title>
+            </Head>
             <Menu />
             <div>
                 <div className="w-full mb-10 h-fit">

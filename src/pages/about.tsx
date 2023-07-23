@@ -7,6 +7,7 @@ import Footer from "@/components/Footer"
 import fsPromises from 'fs/promises';
 import path from 'path'
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
+import Head from "next/head"
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), '/src/JsonFiles/about.json');
@@ -22,6 +23,9 @@ export default function Home(props: { about: any; }) {
     const about = props.about;
     return (
         <>
+            <Head>
+                <title>Sobre - Terno do Binga</title>
+            </Head>
             <Menu />
             <div className="flex flex-row mt-4 max-xl:grid xl:flex drop-shadow-xl">
                 <div className="my-2 ml-12 md:mx-24 xl:mr-0 xl:ml-36 xl:basis-2/6">

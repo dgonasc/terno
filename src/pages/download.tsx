@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
 import { FiDownload } from "react-icons/fi";
 import Image from "next/image";
+import Head from "next/head"
 
 export default function Download() {
 
@@ -25,6 +26,9 @@ function onDownloadClickFotos() {
 
     return (
         <>
+            <Head>
+                <title>Download - Terno do Binga</title>
+            </Head>
             <Menu />
             <div className="grid items-center justify-center m-4 lg:flex">
                 <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" onClick={onDownloadClickRelease}>
