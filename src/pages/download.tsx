@@ -28,8 +28,8 @@ function onDownloadClickFotos() {
         <>
             <Head>
                 <title>Download - Terno do Binga</title>
-                <meta name="description" content="Checkout our cool page" key="desc" />
-                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta name="description" content="Downloads Terno do Binga" key="desc" />
+                <meta property="og:title" content="Downloads Terno do Binga" />
             </Head>
             <Menu />
             <div className="grid items-center justify-center m-4 lg:flex">

@@ -25,8 +25,8 @@ export default function Home(props: { about: any; }) {
         <>
             <Head>
                 <title>Sobre - Terno do Binga</title>
-                <meta name="description" content="Checkout our cool page" key="desc" />
-                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta name="description" content="Leia sobre o Terno do Binga" key="desc" />
+                <meta property="og:title" content="Leia sobre o Terno do Binga" />
             </Head>
             <Menu />
             <div className="flex flex-row mt-4 max-xl:grid xl:flex drop-shadow-xl">

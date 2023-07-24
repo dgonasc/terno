@@ -31,8 +31,8 @@ export default function ModalPhotos(props: { photos: any; }) {
         <>
             <Head>
                 <title>Fotos - Terno do Binga</title>
-                <meta name="description" content="Checkout our cool page" key="desc" />
-                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta name="description" content="Fotos Terno do Binga" key="desc" />
+                <meta property="og:title" content="Fotos Terno do Binga" />
             </Head>
             <Menu />
             <div>

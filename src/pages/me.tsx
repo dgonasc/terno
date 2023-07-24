@@ -8,8 +8,8 @@ export default function me() {
         <>
             <Head>
                 <title>Links - Terno do Binga</title>
-                <meta name="description" content="Checkout our cool page" key="desc" />
-                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta name="description" content="Links Terno do Binga" key="desc" />
+                <meta property="og:title" content="Links Terno do Binga" />
             </Head>
             <div className="h-screen bg-gradient-to-tr to-green-400 from-black">
                 <div className="grid items-center justify-center lg:ml-12">
@@ -68,7 +68,7 @@ export default function me() {
                             </Link>
                         </li>
                         <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
-                            <Link href="/" className="flex items-center justify-center mx-44 max-lg:mx-20">
+                            <Link href="/download" className="flex items-center justify-center mx-44 max-lg:mx-20">
                                 <Image
                                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/downloadIcon.png"
                                 alt='Logo Terno do Binga'
