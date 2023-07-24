@@ -19,7 +19,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home(props: { about: any; }) {
+export default function About(props: { about: any; }) {
     const about = props.about;
     return (
         <>
@@ -39,11 +39,11 @@ export default function Home(props: { about: any; }) {
                 </div>
                 <div className="grid ml-12 basis-3/6 lg:ml-44">
                     <Image
-                    src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/sobre-2.jpg'
-                    alt='Foto sobre'
-                    width={300}
-                    height={180}
-                    className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-90 shadow-black"
+                        src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/sobre-2.jpg'
+                        alt='Foto sobre'
+                        width={300}
+                        height={180}
+                        className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-90 shadow-black"
                     />
                     <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4">Foto: @quem.e.matheus</h3>
                 </div>

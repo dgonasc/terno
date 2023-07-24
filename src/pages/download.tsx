@@ -6,23 +6,23 @@ import Head from "next/head"
 
 export default function Download() {
 
-function onDownloadClickRelease() {
-    const link = document.createElement("a")
-    link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/1.jpg"
-    link.target = "_blank"
-    document.body.appendChild(link)
-    link.click()
-    link.parentNode?.removeChild(link)
-}
+    function DownloadRelease() {
+        const link = document.createElement("a")
+        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/1.jpg"
+        link.target = "_blank"
+        document.body.appendChild(link)
+        link.click()
+        link.parentNode?.removeChild(link)
+    }
 
-function onDownloadClickFotos() {
-    const link = document.createElement("a")
-    link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/download/Photos.zip"
-    link.target = "_blank"
-    document.body.appendChild(link)
-    link.click()
-    link.parentNode?.removeChild(link)
-}
+    function DownloadFotos() {
+        const link = document.createElement("a")
+        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/download/Photos.zip"
+        link.target = "_blank"
+        document.body.appendChild(link)
+        link.click()
+        link.parentNode?.removeChild(link)
+    }
 
     return (
         <>
@@ -33,7 +33,8 @@ function onDownloadClickFotos() {
             </Head>
             <Menu />
             <div className="grid items-center justify-center m-4">
-                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" onClick={onDownloadClickRelease}>
+                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
+                    onClick={DownloadRelease}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_AZUL.PNG"
                         alt="Logo em fundo azul"
@@ -46,7 +47,8 @@ function onDownloadClickFotos() {
                         <button className="ml-6 text-2xl"><FiDownload /></button>
                     </div>
                 </div>
-                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" onClick={onDownloadClickFotos}>
+                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
+                    onClick={DownloadFotos}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_VERDIM.PNG"
                         alt="Logo em fundo azul"

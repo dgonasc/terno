@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/EmailTemplate';
-import { Resend } from 'resend'; 
+import { Resend } from 'resend';
 
 const resend = new Resend('re_9agAoK19_AFz4wQj6ZNCejb2UwFkfCtrR');
 
