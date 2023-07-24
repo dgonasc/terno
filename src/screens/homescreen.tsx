@@ -46,7 +46,7 @@ export default function HomeScreen() {
                 className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-70"
                 />
             </div>
-            <div className="grid justify-center my-4 text-center sm:mx-16 lg:mx-36">
+            <div className="grid justify-center my-4 text-center mt-14 sm:mx-16 lg:mx-36">
                 <div className="grid text-gray-600 font-xilosa">
                     <h2 className="text-2xl">Contato</h2>
                     <h3>ternodobinga@gmail.com</h3>

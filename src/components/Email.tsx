@@ -64,14 +64,14 @@ export default function ContactForm() {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder='email'
+        placeholder='E-mail'
         className='p-2 mt-3 border-2 border-yellow-200 rounded-lg w-72'
       />
       <textarea
         name="message"
         value={formData.message}
         onChange={handleChange}
-        placeholder='mensagem'
+        placeholder='Mensagem'
         className='p-2 mt-3 border-2 border-yellow-200 rounded-lg h-36 w-72'
       />
       <button type="submit" className='mx-20 mt-4 text-white uppercase bg-gray-400 border-2 border-yellow-300 rounded-lg shadow-md shadow-gray-500'>Enviar</button>
