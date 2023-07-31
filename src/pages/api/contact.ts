@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/EmailTemplate';
 import { Resend } from 'resend';
 
-const tokenResend = process.env.RESEND_TOKEN
+const tokenResend = process.env.SERVER_SIDE_ONLY_VAR_RESEND_TOKEN
 
 const resend = new Resend(tokenResend);
 
