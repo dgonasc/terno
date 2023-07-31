@@ -2,7 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/EmailTemplate';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_TOKEN);
+const tokenResend = process.env.RESEND_TOKEN
+
+const resend = new Resend(tokenResend);
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
