@@ -11,9 +11,6 @@ const nextConfig = {
       },
     ],
   },
-  env: {
-    RESEND_TOKEN: process.env.RESEND_TOKEN
-  }
 }
 
 module.exports = nextConfig
