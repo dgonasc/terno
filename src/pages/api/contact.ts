@@ -6,7 +6,7 @@ import { Resend } from 'resend';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const resend = new Resend(process.env.RESEND_TOKEN);
-  
+
   try {
     const { name, email, message } = req.body;
 
