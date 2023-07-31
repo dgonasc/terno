@@ -49,7 +49,7 @@ const external_resend_namespaceObject = require("resend");
 ;// CONCATENATED MODULE: ./src/pages/api/contact.ts
 
 
-const tokenResend = process.env.RESEND_TOKEN;
+const tokenResend = "re_9agAoK19_AFz4wQj6ZNCejb2UwFkfCtrR";
 const resend = new external_resend_namespaceObject.Resend(tokenResend);
 /* harmony default export */ const contact = (async (req, res)=>{
     try {
