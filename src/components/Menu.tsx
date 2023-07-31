@@ -35,22 +35,22 @@ export default function Menu() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/about">
+                            <Link prefetch={false} href="/about">
                                 Sobre
                             </Link>
                         </li>
                         <li>
-                            <Link href="/photos">
+                            <Link prefetch={false} href="/photos">
                                 Fotos
                             </Link>
                         </li>
                         <li>
-                            <Link href="/search">
+                            <Link prefetch={false} href="/search">
                                 Pesquisa
                             </Link>
                         </li>
                         <li>
-                            <Link href="/download">
+                            <Link prefetch={false} href="/download">
                                 Download
                             </Link>
                         </li>

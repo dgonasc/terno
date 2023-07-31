@@ -8,7 +8,7 @@ interface TabProps {
         resume: string;
         image: string;
     }[];
-    }
+}
 
     const Tab: React.FC<TabProps> = ({ tabs }) => {
     const [activeTab, setActiveTab] = useState<number>(0);

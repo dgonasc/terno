@@ -3,23 +3,24 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { SiYoutube, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
+import VideoHome from "@/components/VideoHome";
 
 
 export default function HomeScreen() {
 
-    const videoEl = useRef(null);
+    // const videoEl = useRef(null);
 
-    const attemptPlay = () => {
-        videoEl &&
-        videoEl.current &&
-        (videoEl.current as HTMLVideoElement).play().catch(error => {
-            console.error("Error attempting to play", error);
-        });
-    };
+    // const attemptPlay = () => {
+    //     videoEl &&
+    //     videoEl.current &&
+    //     (videoEl.current as HTMLVideoElement).play().catch(error => {
+    //         console.error("Error attempting to play", error);
+    //     });
+    // };
 
-    useEffect(() => {
-        attemptPlay();
-    }, []);
+    // useEffect(() => {
+    //     attemptPlay();
+    // }, []);
 
 
     return (
@@ -36,15 +37,17 @@ export default function HomeScreen() {
             </div>
 
             <div>
-                <video
+                {VideoHome()}
+                {/* <video
                 playsInline
                 loop
                 muted
                 preload="metadata"
-                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mp4"
+                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mp4"
+                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mov"
                 ref={videoEl}
                 className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-70"
-                />
+                /> */}
             </div>
             <div className="grid justify-center my-4 text-center mt-14 sm:mx-16 lg:mx-36">
                 <div className="grid text-gray-600 font-xilosa">
