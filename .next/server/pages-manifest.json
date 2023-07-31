@@ -1,7 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html",
+  "/api/contact": "pages/api/contact.js",
+  "/download": "pages/download.html",
+  "/": "pages/index.html",
+  "/me": "pages/me.html",
+  "/search": "pages/search.html",
+  "/_error": "pages/_error.js",
+  "/about": "pages/about.js",
+  "/photos": "pages/photos.js"
 }
