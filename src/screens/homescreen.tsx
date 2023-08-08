@@ -1,67 +1,143 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { SiYoutube, SiInstagram } from "react-icons/si";
-import { FiMail } from "react-icons/fi";
 import VideoHome from "@/components/VideoHome";
-
+import Image from "next/image";
+import { motion } from "framer-motion"
 
 export default function HomeScreen() {
+    const [isHovering, setIsHovered] = useState(false);
+    const onMouseEnter = () => setIsHovered(true);
+    const onMouseLeave = () => setIsHovered(false);
 
-    // const videoEl = useRef(null);
+    const [isHovering2, setIsHovered2] = useState(false);
+    const onMouseEnter2 = () => setIsHovered2(true);
+    const onMouseLeave2 = () => setIsHovered2(false);
 
-    // const attemptPlay = () => {
-    //     videoEl &&
-    //     videoEl.current &&
-    //     (videoEl.current as HTMLVideoElement).play().catch(error => {
-    //         console.error("Error attempting to play", error);
-    //     });
-    // };
+    const [isHovering3, setIsHovered3] = useState(false);
+    const onMouseEnter3 = () => setIsHovered3(true);
+    const onMouseLeave3 = () => setIsHovered3(false);
 
-    // useEffect(() => {
-    //     attemptPlay();
-    // }, []);
-
+    const [isHovering4, setIsHovered4] = useState(false);
+    const onMouseEnter4 = () => setIsHovered4(true);
+    const onMouseLeave4 = () => setIsHovered4(false);
 
     return (
         <>
-        <div className="grid items-start justify-center">
-            <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
-                <h3 className="m-5 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl">Terno do Binga</h3>
-                <p className="mb-10 text-lg max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
-                    <Link href="/about" className="p-4 text-sm text-black border-solid rounded-md shadow-md max-sm:ml-8 max-sm:p-2 hover:opacity-60 font-xilosa hover:bg-corterceira/30 shadow-black">
-                        <button>
-                            Saiba mais
-                        </button>
-                    </Link>
+            <div className="grid items-start justify-center">
+                <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
+                    <h3 className="m-5 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl">Terno do Binga</h3>
+                    <p className="mb-10 text-lg opacity-60 max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
+                        {/* <Link href="/about" className="p-4 text-sm text-black border-solid rounded-md shadow-md max-sm:ml-8 max-sm:p-2 hover:opacity-60 font-xilosa hover:bg-corterceira/30 shadow-black">
+                            <button>
+                                Saiba mais
+                            </button>
+                        </Link> */}
+                </div>
+                <div>{VideoHome()}</div>
             </div>
+            <div className="flex justify-between gap-8 mx-8 mb-8 2xl:my-32 2xl:mx-48">
+                <motion.button
+                    animate={{
+                        scale: [1, 1.2, 1.2, 1, 1],
+                        rotate: [270, 0, 0, 270, 0],
+                    }}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                >
+                    { isHovering ? (
+                        <Image
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_pink_1_1.png"
+                            alt="Art Yelow"
+                            width={200}
+                            height={200}
+                            className="relative z-0 w-full rounded-full"
+                        /> ) :(
+                            <Image
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_yellow_1_1.png"
+                                alt="Art Yelow"
+                                width={200}
+                                height={200}
+                                className="w-full rounded-full"
+                            />)}
+                </motion.button>
 
-            <div>
-                {VideoHome()}
-                {/* <video
-                playsInline
-                loop
-                muted
-                preload="metadata"
-                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mp4"
-                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mov"
-                ref={videoEl}
-                className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-70"
-                /> */}
+                <motion.button
+                    animate={{
+                        scale: [1, 1.2, 1.2, 1, 1],
+                        rotate: [0, 270, 0, 270, 0],
+                    }}
+                    onMouseEnter={onMouseEnter2}
+                    onMouseLeave={onMouseLeave2}
+                >
+                    {isHovering2 ? (
+                        <Image
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_red_1_1.png"
+                            alt="Art Blue"
+                            width={200}
+                            height={200}
+                            className="w-full rounded-full"
+                        />) : (
+                            <Image
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_blue_1_1.png"
+                                alt="Art Blue"
+                                width={200}
+                                height={200}
+                                className="w-full rounded-full"
+                            />)}
+                </motion.button>
+
+                <motion.button
+                    animate={{
+                        scale: [1, 1.2, 1.2, 1, 1],
+                        rotate: [0, 0, 270, 0, 270],
+                    }}
+                    onMouseEnter={onMouseEnter3}
+                    onMouseLeave={onMouseLeave3}
+                >
+                    {isHovering3 ? (
+                        <Image
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_yellow_1_1.png"
+                            alt="Art Yellow"
+                            width={200}
+                            height={200}
+                            className="w-full rounded-full"
+                        /> ) : (
+                            <Image
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_pink_1_1.png"
+                                alt="Art Yellow"
+                                width={200}
+                                height={200}
+                                className="w-full rounded-full"
+                            />)}
+                </motion.button>
+
+                <motion.button
+                    animate={{
+                        scale: [1, 1.2, 1.2, 1, 1],
+                        rotate: [270, 0, 0, 0, 270],
+                    }}
+                    onMouseEnter={onMouseEnter4}
+                    onMouseLeave={onMouseLeave4}
+                    >
+                        {isHovering4 ? (
+                            <Image
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_blue_1_1.png"
+                                alt="Art Red"
+                                width={200}
+                                height={200}
+                                className="w-full rounded-full"
+                            /> ) : (
+                                    <Image
+                                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_red_1_1.png"
+                                        alt="Art Red"
+                                        width={200}
+                                        height={200}
+                                        className="w-full rounded-full"
+                                    />)}
+                </motion.button>
             </div>
-            <div className="grid justify-center my-4 text-center mt-14 sm:mx-16 lg:mx-36">
-                <div className="grid text-gray-600 font-xilosa">
-                    <h2 className="text-2xl">Contato</h2>
-                    <h3>ternodobinga@gmail.com</h3>
-                </div>
-                <div className="hidden m-5 ml-6 space-x-3 text-2xl max-lg:flex max-lg:justify-center">
-                    <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
-                    <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
-                    <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
-                </div>
-            </div>
-        </div>
-        <Footer />
+            <Footer />
         </>
     )
 }

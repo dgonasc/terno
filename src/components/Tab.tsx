@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { MotionConfig, motion } from 'framer-motion';
 
 interface TabProps {
     tabs: {
@@ -17,6 +18,21 @@ interface TabProps {
         setActiveTab(index);
     };
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.5
+            }
+        }
+    }
+
+    const item = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
+    }
+
     return (
         <div className='grid m-2 mt-1 lg:mt-8 lg:flex'>
             <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-lg:grid-flow-col max-lg:grid-rows-2 lg:ml-12 xl:ml-36 lg:basis-2/6'>
@@ -24,7 +40,7 @@ interface TabProps {
                 <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white border-2 border-yellow-100 shadow-lg shadow-yellow-50 rounded-xl lg:h-36 h-14 max-lg:w-28 hover:opacity-70"
                     key={index}
                     onClick={() => handleTabClick(index)}
-                    style={{backgroundColor: activeTab === index ? '#FFFACD' : 'white'}}
+                    style={{backgroundColor: activeTab === index ? '#32CD32' : 'white'}}
                     // {{ fontWeight: activeTab === index ? 'bold' : 'normal' }}
                 >
                     <div className='items-center justify-center hidden w-1/3 my-2 bg-cover lg:flex rounded-xl bg-landscape'>
@@ -35,21 +51,35 @@ interface TabProps {
                         height={180}
                         />
                     </div>
-                    <div className='grid w-2/3 m-1'>
-                        <h3 className='text-xs font-bold text-gray-900 xl:text-2xl lg:text-sm'>
-                            {tab.label}
-                        </h3>
-                        <p className='hidden mt-2 text-gray-600 xl:text-lg lg:text-xs lg:flex'>
-                            {tab.resume}
-                        </p>
-                    </div>
+                    <MotionConfig>
+                        <motion.div
+                        initial="hidden"
+                        animate="show"
+                        variants={container}
+
+                        className='grid w-2/3'>
+                            <motion.h3 variants={item} className='mt-2 text-xs font-bold text-gray-900 xl:text-xl lg:text-sm'>
+                                {tab.label}
+                            </motion.h3>
+                            <motion.p variants={item} className='hidden mt-1 text-gray-600 xl:text-lg lg:text-xs lg:flex'>
+                                {tab.resume}
+                            </motion.p>
+                        </motion.div>
+                    </MotionConfig>
                 </button>
                 ))}
             </div>
 
-            <div className='flex justify-center m-3 drop-shadow-xl max-lg:mt-0 lg:mx-24 font-noto'>
-                {tabs[activeTab].content}
-            </div>
+            <MotionConfig>
+                <motion.div 
+                initial="hidden"
+                animate="show"
+                variants={container}
+
+                className='flex justify-center m-3 drop-shadow-xl max-lg:mt-0 lg:mx-24 font-noto'>
+                    <motion.p variants={item}>{tabs[activeTab].content}</motion.p>
+                </motion.div>
+            </MotionConfig>
         </div>
     );
 };

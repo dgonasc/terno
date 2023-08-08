@@ -17,16 +17,15 @@ export default function VideoHome(){
     }, []);
 
     return(
-        <div>
+        <div className="flex w-full">
             <video
                 playsInline
                 loop
                 muted
                 preload="metadata"
-                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mp4"
-                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/video_home.mov"
+                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Video_Home_Binga.mp4"
                 ref={videoEl}
-                className="flex object-cover w-full shadow-2xl shadow-green-50 lg:h-96 h-60 opacity-70"
+                className="flex items-start object-cover w-full h-40 mb-10 shadow-2xl shadow-green-50 lg:h-96 opacity-70"
             />
         </div>
     )

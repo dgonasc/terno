@@ -9,7 +9,7 @@ const Search = () => {
     const tabs = [
                 {
                     label:'Ciranda',
-                    resume:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
+                    resume:'Uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
                     content:'A ciranda é uma dança típica das praias, mais precisamente daquelas situadas ao norte de Pernambuco.',
                     image:'https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ciranda.jpg'
                 },

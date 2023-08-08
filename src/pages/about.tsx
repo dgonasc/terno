@@ -34,7 +34,7 @@ export default function About(props: { about: any; }) {
                 {about.map((post: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; content: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) =>
                     <div key={post.id}>
                         <h2 className="m-3 text-4xl lg:text-6xl font-xilosa">{post.title}</h2>
-                        <p className="text-xl lg:text-2xl font-noto max-lg:mr-8">{post.content}</p>
+                        <p className="text-xl opacity-50 lg:text-2xl font-noto max-lg:mr-8">{post.content}</p>
                     </div>)}
                 </div>
                 <div className="grid ml-12 basis-3/6 lg:ml-44">

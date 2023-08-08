@@ -8,6 +8,7 @@ import { Key } from "react";
 import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
 import Head from "next/head"
+import { MotionConfig, motion } from 'framer-motion';
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), '/src/JsonFiles/photos.json');
@@ -37,26 +38,33 @@ export default function ModalPhotos(props: { photos: any; }) {
             <Menu />
             <div>
                 <div className="w-full mb-10 h-fit">
-                        <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
-                            {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
-                            <div key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl">
-                                <div className="m-1 bg-cover">
-                                    <Image
-                                    src={photo.image}
-                                    alt="Fotos"
-                                    width={300}
-                                    height={180}
-                                    className="rounded-lg bg-landscape hover:opacity-70"
-                                    onClick={() => setIsOpen(photo.image)}
-                                    />
-                                </div>
-                                <div className='mt-2 text-xs text-center text-gray-600 lg:text-sm'>
-                                    <p>{photo.description}</p>
-                                    <p>Foto: {photo.author}</p>
-                                </div>
-                            </div>
-                            )}
-                        </div>
+                    <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
+                        {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
+                            <MotionConfig>
+                                <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+
+                                key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl">
+                                    <div className="m-1 bg-cover">
+                                        <Image
+                                        src={photo.image}
+                                        alt="Fotos"
+                                        width={300}
+                                        height={180}
+                                        className="rounded-lg bg-landscape hover:opacity-70"
+                                        onClick={() => setIsOpen(photo.image)}
+                                        />
+                                    </div>
+                                    <div className='mt-2 text-xs text-center text-gray-600 lg:text-sm'>
+                                        <p>{photo.description}</p>
+                                        <p>Foto: {photo.author}</p>
+                                    </div>
+                                </motion.div>
+                            </MotionConfig>
+                        )}
+                    </div>
                 </div>
 
                 <Transition appear show={!!isOpen} as={Fragment}>
