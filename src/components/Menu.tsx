@@ -32,50 +32,51 @@ export default function Menu() {
                             animate={{ y: 80 }}
                             transition={{ delay: 1 }}
                         >
-                            <ul className="z-40 lg:flex lg:items-center lg:-mt-16 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
+                            <ul className="z-40 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
                                 <li className="max-lg:pb-2">
                                     <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
-                                        Início
+                                        início
                                     </Link>
                                 </li>
                                 <li  className="max-lg:pb-2">
                                     <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/about">
-                                        Sobre
+                                        sobre
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
                                     <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/photos">
-                                        Fotos
+                                        fotos
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
                                     <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/search">
-                                        Pesquisa
+                                        pesquisa
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
                                     <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
-                                        Download
+                                        download
                                     </Link>
                                 </li>
                             </ul>
                         </motion.div>
                     </MotionConfig>
-                    <MotionConfig transition={{ duration: 2 }}>
+                    <MotionConfig transition={{ duration: 1 }}>
                         <motion.div
-                            animate={{ x: 50 }}
-                            transition={{ delay: 0.5 }}
-                        className="flex items-center space-x-3 text-2xl max-lg:ml-12 max-lg:mt-24 lg:justify-center drop-shadow-md">
-                            <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
-                            <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
-                            <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
-                            <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
-                                alt="Árvore com folhas vermelhas"
-                                width={40}
-                                height={15}
-                                className="pl-2 drop-shadow-xl"
-                            />
+                            initial={{ y: -100 }}
+                            animate={{ y: 3 }}
+                            transition={{ delay: 1.5 }}
+                            className="flex items-center space-x-3 text-2xl max-lg:mr-44 max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
+                                <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
+                                <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
+                                <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
+                                    alt="Árvore com folhas vermelhas"
+                                    width={40}
+                                    height={15}
+                                    className="pl-2 drop-shadow-xl"
+                                />
                         </motion.div>
                     </MotionConfig>
                 </nav>
