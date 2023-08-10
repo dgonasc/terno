@@ -24,7 +24,7 @@ export default function HomeScreen() {
 
     return (
         <>
-            <div className="grid items-start justify-center">
+            <div className="grid items-start justify-center ">
                 <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
                     <h3 className="m-5 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl">Terno do Binga</h3>
                     <p className="mb-10 text-lg opacity-60 max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
@@ -40,14 +40,14 @@ export default function HomeScreen() {
                 <motion.button
                     animate={{
                         scale: [1, 1.2, 1.2, 1, 1],
-                        rotate: [270, 0, 0, 270, 0],
+                        rotate: [0, 0, 0, 0, 0],
                     }}
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                 >
                     { isHovering ? (
                         <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_pink_1_1.png"
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_yellow.png"
                             alt="Art Yelow"
                             width={200}
                             height={200}
@@ -65,14 +65,14 @@ export default function HomeScreen() {
                 <motion.button
                     animate={{
                         scale: [1, 1.2, 1.2, 1, 1],
-                        rotate: [0, 270, 0, 270, 0],
+                        rotate: [0, 0, 0, 0, 0],
                     }}
                     onMouseEnter={onMouseEnter2}
                     onMouseLeave={onMouseLeave2}
                 >
                     {isHovering2 ? (
                         <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_red_1_1.png"
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_blue.png"
                             alt="Art Blue"
                             width={200}
                             height={200}
@@ -90,14 +90,14 @@ export default function HomeScreen() {
                 <motion.button
                     animate={{
                         scale: [1, 1.2, 1.2, 1, 1],
-                        rotate: [0, 0, 270, 0, 270],
+                        rotate: [0, 0, 0, 0, 0],
                     }}
                     onMouseEnter={onMouseEnter3}
                     onMouseLeave={onMouseLeave3}
                 >
                     {isHovering3 ? (
                         <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_yellow_1_1.png"
+                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_pink.png"
                             alt="Art Yellow"
                             width={200}
                             height={200}
@@ -115,14 +115,14 @@ export default function HomeScreen() {
                 <motion.button
                     animate={{
                         scale: [1, 1.2, 1.2, 1, 1],
-                        rotate: [270, 0, 0, 0, 270],
+                        rotate: [0, 0, 0, 0, 0],
                     }}
                     onMouseEnter={onMouseEnter4}
                     onMouseLeave={onMouseLeave4}
                     >
                         {isHovering4 ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_blue_1_1.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_red.png"
                                 alt="Art Red"
                                 width={200}
                                 height={200}

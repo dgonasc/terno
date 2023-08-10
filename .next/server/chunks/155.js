@@ -56,7 +56,7 @@ function Menu() {
                 }),
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", {
                     ref: navRef,
-                    className: "text-xl max-lg:m-2 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-gray-100 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex",
+                    className: "text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex",
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__.MotionConfig, {
                             transition: {
@@ -70,36 +70,48 @@ function Menu() {
                                     delay: 1
                                 },
                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                    className: "z-40 lg:flex lg:items-center lg:-mt-16 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:m-6 max-lg:mt-0 max-lg:space-y-6",
+                                    className: "z-40 lg:flex lg:items-center lg:-mt-16 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4",
                                     children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                            href: "/",
-                                            children: "In\xedcio"
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: "max-lg:pb-2",
+                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
+                                                href: "/",
+                                                className: "max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg",
+                                                children: "In\xedcio"
+                                            })
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: "max-lg:pb-2",
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 prefetch: false,
+                                                className: "max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg",
                                                 href: "/about",
                                                 children: "Sobre"
                                             })
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: "max-lg:pb-2",
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 prefetch: false,
+                                                className: "max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg",
                                                 href: "/photos",
                                                 children: "Fotos"
                                             })
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: "max-lg:pb-2",
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 prefetch: false,
+                                                className: "max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg",
                                                 href: "/search",
                                                 children: "Pesquisa"
                                             })
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: "max-lg:pb-2",
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 prefetch: false,
+                                                className: "max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg",
                                                 href: "/download",
                                                 children: "Download"
                                             })

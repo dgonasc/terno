@@ -23,7 +23,7 @@ module.exports = {
         noto: ['var(--font-noto)']
       },
       backgroundImage: {
-        bingaAzul: "url('https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_AZUL.PNG')"
+        bingabg: "url('https://terno-do-binga.s3.us-east-2.amazonaws.com/files/bg-art.png')"
       }
     },
   },

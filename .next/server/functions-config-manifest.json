@@ -2,6 +2,7 @@
   "version": 1,
   "functions": {
     "/about": {},
-    "/photos": {}
+    "/photos": {},
+    "/photosOLD": {}
   }
 }

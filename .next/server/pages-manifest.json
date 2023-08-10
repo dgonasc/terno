@@ -8,6 +8,7 @@
   "/me": "pages/me.html",
   "/search": "pages/search.html",
   "/_error": "pages/_error.js",
+  "/photosOLD": "pages/photosOLD.js",
   "/about": "pages/about.js",
   "/photos": "pages/photos.js"
 }

@@ -26,33 +26,35 @@ export default function Menu() {
                         />
                     </Link>
                 </div>
-                <nav ref={navRef} className="text-xl max-lg:m-2 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-gray-100 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
+                <nav ref={navRef} className="text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
                     <MotionConfig transition={{ duration: 1 }}>
                         <motion.div
                             animate={{ y: 80 }}
                             transition={{ delay: 1 }}
                         >
-                            <ul className="z-40 lg:flex lg:items-center lg:-mt-16 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:m-6 max-lg:mt-0 max-lg:space-y-6">
-                                    <Link href="/">
+                            <ul className="z-40 lg:flex lg:items-center lg:-mt-16 lg:uppercase lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
+                                <li className="max-lg:pb-2">
+                                    <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
                                         Início
                                     </Link>
-                                <li>
-                                    <Link prefetch={false} href="/about">
+                                </li>
+                                <li  className="max-lg:pb-2">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/about">
                                         Sobre
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link prefetch={false} href="/photos">
+                                <li className="max-lg:pb-2">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/photos">
                                         Fotos
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link prefetch={false} href="/search">
+                                <li className="max-lg:pb-2">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/search">
                                         Pesquisa
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link prefetch={false} href="/download">
+                                <li className="max-lg:pb-2">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
                                         Download
                                     </Link>
                                 </li>

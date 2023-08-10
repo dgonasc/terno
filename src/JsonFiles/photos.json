@@ -360,5 +360,61 @@
             "description":"Ensaio Praça Terno do Binga",
             "author":"Autor Desconhecido"
         }
+    ],
+    "flyers": [
+        {
+            "id":"1",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/e32a0350-c062-4378-be18-f69ae6486958.JPG",
+            "description":"Casa Fúnebre - Nilton Jr e o Coco do Pajé",
+            "author":" "
+        },
+        {
+            "id":"2",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/fac44d27-8925-4f13-9752-b681447ecd9c.JPG",
+            "description":"Sula",
+            "author":" "
+        },
+        {
+            "id":"3",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3617.jpg",
+            "description":"Honk BH",
+            "author":" "
+        },
+        {
+            "id":"4",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3615.jpg",
+            "description":"Feira Nacional de Artesanato Expominas 2022",
+            "author":" "
+        },
+        {
+            "id":"5",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3614.jpg",
+            "description":"Feira Nacional de Artesanato Expominas 2022",
+            "author":" "
+        },
+        {
+            "id":"6",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/49957c1e-7118-440d-a599-4e2ba99a2a0f.JPG",
+            "description":"Arrastão de Carnaval Humaitá",
+            "author":" "
+        },
+        {
+            "id":"7",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/1b83afce-7ef3-45f0-9db1-038c3c671825.JPG",
+            "description":"Fanfarrice 2023 - Praça Pisa na Fulô",
+            "author":" "
+        },
+        {
+            "id":"8",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/6d708efd-2e6d-4e03-b160-54463b3b7170.JPG",
+            "description":"Fanfarrice 2023 - Praça Pisa na Fulô",
+            "author":" "
+        },
+        {
+            "id":"9",
+            "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/avenidinha_post_laranja.PNG",
+            "description":"Buteco D'Avenidinha",
+            "author":" "
+        }
     ]
 }

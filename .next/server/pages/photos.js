@@ -104,8 +104,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(968);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6197);
+/* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9847);
+/* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_icons_ai__WEBPACK_IMPORTED_MODULE_10__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_headlessui_react__WEBPACK_IMPORTED_MODULE_1__, _components_Menu__WEBPACK_IMPORTED_MODULE_6__, _components_Footer__WEBPACK_IMPORTED_MODULE_7__, framer_motion__WEBPACK_IMPORTED_MODULE_9__]);
 ([_headlessui_react__WEBPACK_IMPORTED_MODULE_1__, _components_Menu__WEBPACK_IMPORTED_MODULE_6__, _components_Footer__WEBPACK_IMPORTED_MODULE_7__, framer_motion__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -127,10 +130,8 @@ async function getStaticProps() {
 }
 function ModalPhotos(props) {
     const photos = props.photos;
-    const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
-    function closeModal() {
-        setIsOpen("");
-    }
+    const flyers = props.flyers;
+    const [selectedPhoto, setSelectedPhoto] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(photos[0]);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_8___default()), {
@@ -149,106 +150,139 @@ function ModalPhotos(props) {
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Menu__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {}),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "w-full mb-10 h-fit",
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                            className: "grid grid-cols-2 cursor-pointer lg:grid-cols-4",
-                            children: photos.map((photo)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_9__.MotionConfig, {
-                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_9__.motion.div, {
-                                        initial: {
-                                            opacity: 0
-                                        },
-                                        animate: {
-                                            opacity: 1
-                                        },
-                                        exit: {
-                                            opacity: 0
-                                        },
-                                        className: "grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl",
-                                        children: [
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                className: "m-1 bg-cover",
-                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                    src: photo.image,
-                                                    alt: "Fotos",
-                                                    width: 300,
-                                                    height: 180,
-                                                    className: "rounded-lg bg-landscape hover:opacity-70",
-                                                    onClick: ()=>setIsOpen(photo.image)
-                                                })
-                                            }),
-                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                className: "mt-2 text-xs text-center text-gray-600 lg:text-sm",
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                className: "flex justify-center m-4 mt-8 text-4xl lg:text-6xl",
+                children: "Fotos"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: "grid grid-cols-1",
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox, {
+                    value: selectedPhoto,
+                    onChange: setSelectedPhoto,
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox.Button, {
+                            className: "flex flex-row-reverse items-center justify-center p-5 m-2 mx-12 border-2 border-green-700 rounded-lg sm:mx-36 xl:mx-72",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                    className: "sm:ml-2 lg:text-4xl",
+                                    children: "Apresenta\xe7\xf5es"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_ai__WEBPACK_IMPORTED_MODULE_10__.AiOutlineArrowDown, {
+                                    className: "mr-10 lg:text-4xl sm:ml-3 animate-bounce"
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox.Options, {
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: "w-full mb-10 h-fit",
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: "grid grid-cols-2 cursor-pointer lg:grid-cols-4",
+                                    children: photos.map((photo)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_9__.MotionConfig, {
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_9__.motion.div, {
+                                                initial: {
+                                                    opacity: 0
+                                                },
+                                                animate: {
+                                                    opacity: 1
+                                                },
+                                                exit: {
+                                                    opacity: 0
+                                                },
+                                                className: "grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl",
                                                 children: [
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                                        children: photo.description
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                        className: "m-1 bg-cover",
+                                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                            src: photo.image,
+                                                            alt: "Fotos",
+                                                            width: 300,
+                                                            height: 180,
+                                                            className: "w-auto rounded-lg bg-landscape hover:opacity-70"
+                                                        })
                                                     }),
-                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                        className: "mt-2 text-xs text-center text-gray-600 lg:text-sm",
                                                         children: [
-                                                            "Foto: ",
-                                                            photo.author
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                                children: photo.description
+                                                            }),
+                                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                                                children: [
+                                                                    "Foto: ",
+                                                                    photo.author
+                                                                ]
+                                                            })
                                                         ]
                                                     })
                                                 ]
-                                            })
-                                        ]
-                                    }, photo.id)
-                                }))
+                                            }, photo.id)
+                                        }))
+                                })
+                            })
                         })
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Transition, {
-                        appear: true,
-                        show: !!isOpen,
-                        as: react__WEBPACK_IMPORTED_MODULE_2__.Fragment,
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Dialog, {
-                            as: "div",
-                            className: "relative z-10",
-                            onClose: closeModal,
+                    ]
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: "grid grid-cols-1 mb-24",
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox, {
+                    value: selectedPhoto,
+                    onChange: setSelectedPhoto,
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox.Button, {
+                            className: "flex flex-row-reverse items-center justify-center p-5 m-2 mx-12 border-2 border-green-700 rounded-lg sm:mx-36 xl:mx-72",
                             children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Transition.Child, {
-                                    as: react__WEBPACK_IMPORTED_MODULE_2__.Fragment,
-                                    enter: "ease-out duration-300",
-                                    enterFrom: "opacity-0",
-                                    enterTo: "opacity-100",
-                                    leave: "ease-in duration-200",
-                                    leaveFrom: "opacity-100",
-                                    leaveTo: "opacity-0",
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: "fixed inset-0 bg-black bg-opacity-25"
-                                    })
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                    className: "sm:ml-2 lg:text-4xl lg:ml-4",
+                                    children: "Eventos Passados"
                                 }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: "fixed inset-0 overflow-y-auto",
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: "z-40 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 bg-opacity-60",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Transition.Child, {
-                                            as: react__WEBPACK_IMPORTED_MODULE_2__.Fragment,
-                                            enter: "ease-out duration-300",
-                                            enterFrom: "opacity-0 scale-95",
-                                            enterTo: "opacity-100 scale-100",
-                                            leave: "ease-in duration-200",
-                                            leaveFrom: "opacity-100 scale-100",
-                                            leaveTo: "opacity-0 scale-95",
-                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Dialog.Panel, {
-                                                className: "w-full max-w-xl align-middle transition-all shadow-xl shadow-yellow-50 rounded-2xl",
-                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                    onClick: closeModal,
-                                                    className: "z-50 w-screen rounded-md",
-                                                    src: isOpen,
-                                                    height: 480,
-                                                    width: 300,
-                                                    alt: ""
-                                                })
-                                            })
-                                        })
-                                    })
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_ai__WEBPACK_IMPORTED_MODULE_10__.AiOutlineArrowDown, {
+                                    className: "ml-2 mr-7 lg:ml-12 lg:text-4xl sm:ml-3 animate-bounce"
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_headlessui_react__WEBPACK_IMPORTED_MODULE_1__.Listbox.Options, {
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: "w-full h-fit",
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: "grid grid-cols-2 cursor-pointer lg:grid-cols-4",
+                                    children: flyers.map((photo)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_9__.MotionConfig, {
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_9__.motion.div, {
+                                                initial: {
+                                                    opacity: 0
+                                                },
+                                                animate: {
+                                                    opacity: 1
+                                                },
+                                                exit: {
+                                                    opacity: 0
+                                                },
+                                                className: "grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl",
+                                                children: [
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                        className: "m-1 bg-cover",
+                                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                            src: photo.image,
+                                                            alt: "Fotos",
+                                                            width: 300,
+                                                            height: 180,
+                                                            className: "w-auto rounded-lg bg-landscape hover:opacity-70"
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                        className: "mt-2 text-xs text-center text-gray-600 lg:text-sm",
+                                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                            children: photo.description
+                                                        })
+                                                    })
+                                                ]
+                                            }, photo.id)
+                                        }))
+                                })
+                            })
                         })
-                    })
-                ]
+                    ]
+                })
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {})
         ]
@@ -453,6 +487,13 @@ module.exports = require("react");
 /***/ ((module) => {
 
 module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ 9847:
+/***/ ((module) => {
+
+module.exports = require("react-icons/ai");
 
 /***/ }),
 

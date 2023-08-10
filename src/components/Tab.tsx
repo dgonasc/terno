@@ -40,7 +40,7 @@ interface TabProps {
                 <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white border-2 border-yellow-100 shadow-lg shadow-yellow-50 rounded-xl lg:h-36 h-14 max-lg:w-28 hover:opacity-70"
                     key={index}
                     onClick={() => handleTabClick(index)}
-                    style={{backgroundColor: activeTab === index ? '#32CD32' : 'white'}}
+                    style={{backgroundColor: activeTab === index ? '#90EE90' : 'white'}}
                     // {{ fontWeight: activeTab === index ? 'bold' : 'normal' }}
                 >
                     <div className='items-center justify-center hidden w-1/3 my-2 bg-cover lg:flex rounded-xl bg-landscape'>
@@ -51,33 +51,26 @@ interface TabProps {
                         height={180}
                         />
                     </div>
-                    <MotionConfig>
-                        <motion.div
-                        initial="hidden"
-                        animate="show"
-                        variants={container}
-
-                        className='grid w-2/3'>
-                            <motion.h3 variants={item} className='mt-2 text-xs font-bold text-gray-900 xl:text-xl lg:text-sm'>
+                        <div className='grid w-2/3'>
+                            <h3 className='mt-2 text-xs font-bold text-gray-900 xl:text-xl lg:text-sm'>
                                 {tab.label}
-                            </motion.h3>
-                            <motion.p variants={item} className='hidden mt-1 text-gray-600 xl:text-lg lg:text-xs lg:flex'>
+                            </h3>
+                            <p className='hidden mt-1 text-gray-600 xl:text-lg lg:text-xs lg:flex'>
                                 {tab.resume}
-                            </motion.p>
-                        </motion.div>
-                    </MotionConfig>
+                            </p>
+                        </div>
                 </button>
                 ))}
             </div>
 
             <MotionConfig>
-                <motion.div 
+                <motion.div
                 initial="hidden"
                 animate="show"
                 variants={container}
 
                 className='flex justify-center m-3 drop-shadow-xl max-lg:mt-0 lg:mx-24 font-noto'>
-                    <motion.p variants={item}>{tabs[activeTab].content}</motion.p>
+                    <motion.p className='text-gray200 drop-shadow-lg font-noto' variants={item}>{tabs[activeTab].content}</motion.p>
                 </motion.div>
             </MotionConfig>
         </div>
