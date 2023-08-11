@@ -26,35 +26,35 @@ export default function Menu() {
                         />
                     </Link>
                 </div>
-                <nav ref={navRef} onClick={showNavBar} className="text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
+                <nav ref={navRef} onClick={showNavBar} className="text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 dark:max-lg:bg-green-800 dark:max-lg:bg-opacity-30 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
                     <MotionConfig transition={{ duration: 1 }}>
                         <motion.div
                             animate={{ y: 80 }}
                             transition={{ delay: 1 }}
                         >
                             <ul className="z-40 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
-                                <li className="max-lg:pb-2">
-                                    <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
+                                <li className="max-lg:pb-3">
+                                    <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 dark:max-lg:border-yellow-400 max-lg:rounded-lg">
                                         início
                                     </Link>
                                 </li>
-                                <li  className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/about">
+                                <li  className="max-lg:pb-3">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 dark:max-lg:border-yellow-400 max-lg:rounded-lg" href="/about">
                                         sobre
                                     </Link>
                                 </li>
-                                <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/photos">
+                                <li className="max-lg:pb-3">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 dark:max-lg:border-yellow-400 max-lg:rounded-lg" href="/photos">
                                         fotos
                                     </Link>
                                 </li>
-                                <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/search">
+                                <li className="max-lg:pb-3">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 dark:max-lg:border-yellow-400 max-lg:rounded-lg" href="/search">
                                         pesquisa
                                     </Link>
                                 </li>
-                                <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
+                                <li className="max-lg:pb-3">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 dark:max-lg:border-yellow-400 max-lg:rounded-lg" href="/download">
                                         downloads
                                     </Link>
                                 </li>
@@ -66,7 +66,7 @@ export default function Menu() {
                             initial={{ y: -100 }}
                             animate={{ y: 3 }}
                             transition={{ delay: 1.5 }}
-                            className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-50 max-lg:bg-opacity-70 max-lg:mr-44 max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
+                            className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-50 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 max-lg:mr-44 max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:border-2 max-lg:border-yellow-300 dark:dark:max-lg:border-yellow-400 max-lg:rounded-lg">
                                 <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiYoutube/></a>
                                 <a href='https://instagram.com/ternodobinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiInstagram/></a>
                                 <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer drop-shadow-xl'><FiMail/></a>
@@ -91,7 +91,7 @@ export default function Menu() {
                     onClick={showNavBar}
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/menu.png"
                     alt='Menu mobile'
-                    className='static cursor-pointer w-14 top-8 lg:hidden'
+                    className='static cursor-pointer w-14 top-8 lg:hidden dark:invert'
                     width={120}
                     height={90}
                 />
