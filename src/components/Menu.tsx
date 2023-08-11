@@ -26,7 +26,7 @@ export default function Menu() {
                         />
                     </Link>
                 </div>
-                <nav ref={navRef} className="text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
+                <nav ref={navRef} onClick={showNavBar} className="text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
                     <MotionConfig transition={{ duration: 1 }}>
                         <motion.div
                             animate={{ y: 80 }}
@@ -34,27 +34,27 @@ export default function Menu() {
                         >
                             <ul className="z-40 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
                                 <li className="max-lg:pb-2">
-                                    <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
+                                    <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
                                         início
                                     </Link>
                                 </li>
                                 <li  className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/about">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/about">
                                         sobre
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/photos">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/photos">
                                         fotos
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/search">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/search">
                                         pesquisa
                                     </Link>
                                 </li>
                                 <li className="max-lg:pb-2">
-                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
+                                    <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
                                         download
                                     </Link>
                                 </li>
@@ -66,10 +66,10 @@ export default function Menu() {
                             initial={{ y: -100 }}
                             animate={{ y: 3 }}
                             transition={{ delay: 1.5 }}
-                            className="flex items-center space-x-3 text-2xl max-lg:mr-44 max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:bg-yellow-50 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
-                                <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer' target='blank'><SiYoutube/></a>
-                                <a href='https://instagram.com/ternodobinga' className='cursor-pointer' target='blank'><SiInstagram/></a>
-                                <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer'><FiMail/></a>
+                            className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-50 max-lg:bg-opacity-70 max-lg:mr-44 max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg">
+                                <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiYoutube/></a>
+                                <a href='https://instagram.com/ternodobinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiInstagram/></a>
+                                <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer drop-shadow-xl'><FiMail/></a>
                                 <Image
                                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
                                     alt="Árvore com folhas vermelhas"

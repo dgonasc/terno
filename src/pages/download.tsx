@@ -32,8 +32,8 @@ export default function Download() {
                 <meta property="og:title" content="Downloads Terno do Binga" />
             </Head>
             <Menu />
-            <div className="grid items-center justify-center m-4">
-                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
+            <div className="grid items-center justify-center m-4 sm:flex">
+                <div className="flex items-center justify-between p-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
                     onClick={DownloadRelease}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_AZUL.PNG"
@@ -47,7 +47,7 @@ export default function Download() {
                         <button className="ml-6 text-2xl"><FiDownload /></button>
                     </div>
                 </div>
-                <div className="flex items-center justify-between p-2 px-6 m-2 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
+                <div className="flex items-center justify-between p-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
                     onClick={DownloadFotos}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_VERDIM.PNG"
