@@ -76,7 +76,7 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                         </Listbox.Options>
                     </Listbox>
                 </div>
-                <div>
+                <div className='mb-12'>
                     <Listbox value={selectedPhoto2} onChange={setSelectedPhoto2}>
                         <Listbox.Button className="flex items-center justify-center p-5 m-2 border-2 border-green-700 rounded-lg max-sm:px-10 mb-14">
                             <h3 className='sm:ml-2 lg:text-4xl lg:ml-4'>Eventos Passados</h3>
