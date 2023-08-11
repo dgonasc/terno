@@ -2,8 +2,13 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/download": "pages/download.js",
-  "/search": "pages/search.js",
-  "/photos": "pages/photos.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html",
+  "/api/contact": "pages/api/contact.js",
+  "/download": "pages/download.html",
+  "/": "pages/index.html",
+  "/me": "pages/me.html",
+  "/search": "pages/search.html",
+  "/about": "pages/about.js",
+  "/photosOLD": "pages/photosOLD.js",
+  "/photos": "pages/photos.js"
 }
