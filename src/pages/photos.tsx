@@ -36,13 +36,13 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                 <meta property="og:title" content="Fotos Terno do Binga" />
             </Head>
             <Menu />
-            <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl'>Fotos</h1>
+            <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl dark:text-zinc-300'>Fotos</h1>
             <div className='grid justify-center'>
                 <div>
                     <Listbox value={selectedPhoto} onChange={setSelectedPhoto}>
                         <Listbox.Button className="flex items-center justify-center p-5 m-2 mb-10 border-2 border-green-700 rounded-lg px-14 max-sm:px-12 ">
-                            <h3 className='sm:ml-2 lg:text-4xl'>Apresentações</h3>
-                            <AiOutlineArrowDown className='mr-10 lg:text-4xl sm:ml-3 animate-bounce' />
+                            <h3 className='sm:ml-2 lg:text-4xl dark:text-zinc-300'>Apresentações</h3>
+                            <AiOutlineArrowDown className='mr-10 lg:text-4xl sm:ml-3 animate-bounce dark:text-zinc-300' />
                         </Listbox.Button>
                         <Listbox.Options>
                             <div  className="w-full mb-10 h-fit">
@@ -54,7 +54,7 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
 
-                                                key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl">
+                                                key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 dark:shadow-gray-600 dark:bg-zinc-700 rounded-xl">
                                                 <div className="m-1 bg-cover">
                                                     <Image
                                                     src={photo.image}
@@ -64,7 +64,7 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                                                     className="w-auto rounded-lg bg-landscape hover:opacity-70"
                                                     />
                                                 </div>
-                                                <div className='mt-2 text-xs text-center text-gray-600 lg:text-sm'>
+                                                <div className='mt-2 text-xs text-center text-gray-600 dark:text-zinc-300 lg:text-sm'>
                                                     <p>{photo.description}</p>
                                                     <p>Foto: {photo.author}</p>
                                                 </div>
@@ -79,8 +79,8 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                 <div className='mb-12'>
                     <Listbox value={selectedPhoto2} onChange={setSelectedPhoto2}>
                         <Listbox.Button className="flex items-center justify-center p-5 m-2 border-2 border-green-700 rounded-lg max-sm:px-10 mb-14">
-                            <h3 className='sm:ml-2 lg:text-4xl lg:ml-4'>Eventos Passados</h3>
-                            <AiOutlineArrowDown className='ml-2 mr-7 lg:ml-12 lg:text-4xl sm:ml-3 animate-bounce' />
+                            <h3 className='sm:ml-2 lg:text-4xl lg:ml-4 dark:text-zinc-300'>Eventos Passados</h3>
+                            <AiOutlineArrowDown className='ml-2 mr-7 lg:ml-12 lg:text-4xl sm:ml-3 animate-bounce dark:text-zinc-300' />
                         </Listbox.Button>
                         <Listbox.Options>
                             <div  className="w-full h-fit">
@@ -92,7 +92,7 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
 
-                                                key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl bg-yellow-50 shadow-yellow-50 rounded-xl">
+                                                key={photo.id} className="grid items-center justify-center m-3 overflow-hidden shadow-xl dark:shadow-gray-600 dark:bg-zinc-700 bg-yellow-50 shadow-yellow-50 rounded-xl">
                                                 <div className="m-1 bg-cover">
                                                     <Image
                                                     src={photo.image}
@@ -102,7 +102,7 @@ export default function ModalPhotos(props: { photos: any; flyers: any }) {
                                                     className="w-auto rounded-lg bg-landscape hover:opacity-70"
                                                     />
                                                 </div>
-                                                <div className='mt-2 text-xs text-center text-gray-600 lg:text-sm'>
+                                                <div className='mt-2 text-xs text-center text-gray-600 dark:text-zinc-300 lg:text-sm'>
                                                     <p>{photo.description}</p>
                                                 </div>
                                             </motion.div>

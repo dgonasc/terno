@@ -32,7 +32,7 @@ export default function Download() {
                 <meta property="og:title" content="Downloads Terno do Binga" />
             </Head>
             <Menu />
-            <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl'>Downloads</h1>
+            <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl dark:text-gray-300'>Downloads</h1>
             <div className="grid items-center justify-center m-4 sm:flex">
                 <div className="flex items-center justify-between p-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
                     onClick={DownloadRelease}>
@@ -44,8 +44,8 @@ export default function Download() {
                         className="mr-5 rounded-full"
                     />
                     <div className="grid items-center justify-center ml-2 mr-4">
-                        <h2 className="text-2xl ">Release</h2>
-                        <button className="ml-6 text-2xl"><FiDownload /></button>
+                        <h2 className="text-2xl dark:text-gray-700 ">Release</h2>
+                        <button className="ml-6 text-2xl dark:text-gray-700"><FiDownload /></button>
                     </div>
                 </div>
                 <div className="flex items-center justify-between p-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
@@ -58,8 +58,8 @@ export default function Download() {
                         className="mr-5 rounded-full"
                     />
                     <div className="grid items-center justify-center mr-4">
-                        <h2 className="text-2xl">Fotos</h2>
-                        <button className="ml-3 text-2xl"><FiDownload /></button>
+                        <h2 className="text-2xl dark:text-gray-700">Fotos</h2>
+                        <button className="ml-3 text-2xl dark:text-gray-700"><FiDownload /></button>
                     </div>
                 </div>
             </div>

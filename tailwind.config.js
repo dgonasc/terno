@@ -8,13 +8,9 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        // 'gradient-conic':
-        //   'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       aspectRatio: {
         '36/9': '36 / 9',
       },

@@ -6,8 +6,8 @@ import { useEffect } from "react";
 export default function Footer() {
 
     return (
-        <div className="fixed inset-x-0 bottom-0 flex items-center justify-between px-6 py-1 bg-gray-200">
-            <h3 className="ml-2 lg:text-lg font-xilosa">© Terno do Binga 2023</h3>
+        <div className="fixed inset-x-0 bottom-0 flex items-center justify-between px-6 py-1 bg-gray-200 dark:bg-zinc-700">
+            <h3 className="ml-2 lg:text-lg font-xilosa dark:text-zinc-300">© Terno do Binga 2023</h3>
             <MotionConfig>
                 <motion.div
                 initial={{ x: 100 }}

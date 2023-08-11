@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { Noto_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Toaster } from 'react-hot-toast'
+import { ThemeProvider } from "next-themes"
 
 const xilosa = localFont({
   src: '../styles/fonts/xilosa_.woff2',
@@ -21,7 +22,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return(
   <main className={`${noto.variable} font-noto ${xilosa.variable} font-xilosa`}>
     <Toaster position="bottom-center" reverseOrder={false}/>
-    <Component {...pageProps} />
+    <ThemeProvider enableSystem={true} attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
   </main>
   )
 }

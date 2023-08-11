@@ -12,21 +12,21 @@ export default function Menu() {
     }
 
     return (
-        <div className="m-0 border-2 border-b-green-600 border-opacity-30">
+        <div className="m-0 border-2 dark:border-t-black border-b-green-600 border-x-green-600 border-opacity-30 dark:border-opacity-20">
             <div className='flex flex-row items-center justify-between lg:px-14 xl:mr-24'>
                 <div>
                     <Link href="/">
                         <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo-2.png"
                         alt='Logo Terno do Binga'
-                        className='w-16 m-2 rounded-full lg:ml-4 lg:w-22'
+                        className='w-16 m-2 rounded-full lg:ml-4 lg:w-22 dark:invert-30 dark:invert'
                         width={300}
                         height={180}
                         id='logo'
                         />
                     </Link>
                 </div>
-                <nav ref={navRef} onClick={showNavBar} className="text-xl max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
+                <nav ref={navRef} onClick={showNavBar} className="text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-green-500 max-lg:w-screen max-lg:rounded-lg max-lg:h-screen lg:flex">
                     <MotionConfig transition={{ duration: 1 }}>
                         <motion.div
                             animate={{ y: 80 }}
@@ -75,7 +75,14 @@ export default function Menu() {
                                     alt="Árvore com folhas vermelhas"
                                     width={40}
                                     height={15}
-                                    className="pl-2 drop-shadow-xl"
+                                    className="pl-2 drop-shadow-xl dark:hidden "
+                                />
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha_darkMode.png"
+                                    alt="Árvore com folhas vermelhas"
+                                    width={40}
+                                    height={15}
+                                    className="hidden pl-2 drop-shadow-xl dark:flex"
                                 />
                         </motion.div>
                     </MotionConfig>

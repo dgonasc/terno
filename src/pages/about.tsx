@@ -33,7 +33,7 @@ export default function About(props: { about: any; }) {
                 <div className="my-2 ml-12 md:mx-24 xl:mr-0 xl:ml-36 xl:basis-2/6">
                 {about.map((post: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; content: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) =>
                     <div key={post.id}>
-                        <h2 className="m-3 text-4xl lg:text-6xl font-xilosa">{post.title}</h2>
+                        <h2 className="m-3 text-4xl dark:text-gray-300 lg:text-6xl font-xilosa">{post.title}</h2>
                         <p className="text-xl opacity-50 lg:text-2xl font-noto max-lg:mr-8">{post.content}</p>
                     </div>)}
                 </div>
@@ -45,7 +45,7 @@ export default function About(props: { about: any; }) {
                         height={180}
                         className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md lg:w-2/3 opacity-90 shadow-black"
                     />
-                    <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4">Foto: @quem.e.matheus</h3>
+                    <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4 dark:text-gray-300">Foto: @quem.e.matheus</h3>
                 </div>
             </div>
             <Footer />
