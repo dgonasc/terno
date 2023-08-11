@@ -32,6 +32,7 @@ export default function Download() {
                 <meta property="og:title" content="Downloads Terno do Binga" />
             </Head>
             <Menu />
+            <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl'>Downloads</h1>
             <div className="grid items-center justify-center m-4 sm:flex">
                 <div className="flex items-center justify-between p-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer" 
                     onClick={DownloadRelease}>

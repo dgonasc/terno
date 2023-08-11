@@ -55,7 +55,7 @@ export default function Menu() {
                                 </li>
                                 <li className="max-lg:pb-2">
                                     <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-50 max-lg:bg-opacity-70 drop-shadow-lg max-lg:border-2 max-lg:border-yellow-300 max-lg:rounded-lg" href="/download">
-                                        download
+                                        downloads
                                     </Link>
                                 </li>
                             </ul>
