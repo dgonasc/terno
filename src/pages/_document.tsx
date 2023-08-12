@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel='shortcurt icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
       </Head>
-      <body>
+      <body className='bg-white dark:bg-slate-900'>
         <Main />
         <NextScript />
       </body>

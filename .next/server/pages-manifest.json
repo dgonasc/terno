@@ -2,9 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/search": "pages/search.js",
-  "/photos": "pages/photos.js",
-  "/": "pages/index.js",
-  "/download": "pages/download.js",
-  "/about": "pages/about.js"
+  "/": "pages/index.js"
 }
