@@ -64,7 +64,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder='Nome'
-            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60'
+            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60 dark:bg-slate-900'
           />
           <input
             type="email"
@@ -72,16 +72,16 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder='E-mail'
-            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60'
+            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60 dark:bg-slate-900'
           />
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
             placeholder='Mensagem'
-            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg h-36 w-72 border-opacity-60 placeholder:opacity-70'
+            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg h-36 w-72 border-opacity-60 placeholder:opacity-70 dark:bg-slate-900'
           />
-          <button type="submit" className='mx-20 mt-4 text-white uppercase bg-gray-400 border-2 border-yellow-300 rounded-lg border-opacity-80 dark:text-gray-200'>Enviar</button>
+          <button type="submit" className='mx-20 mt-4 text-white uppercase border-2 border-yellow-300 rounded-lg bg-slate-500 dark:bg-slate-900 border-opacity-80 dark:text-gray-200'>Enviar</button>
         </form>
       </div>
       <div>
