@@ -25,7 +25,7 @@ export default function VideoHome(){
                 preload="metadata"
                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Video_Home_Binga.mp4"
                 ref={videoEl}
-                className="flex items-start object-cover w-full h-40 mb-10 shadow-2xl shadow-green-50 lg:h-96 opacity-70"
+                className="flex items-start object-cover w-full h-40 mb-10 shadow-2xl shadow-green-50 dark:shadow-slate-600 lg:h-96 opacity-70"
             />
         </div>
     )

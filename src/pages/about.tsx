@@ -29,7 +29,7 @@ export default function About(props: { about: any; }) {
                 <meta property="og:title" content="Leia sobre o Terno do Binga" />
             </Head>
             <Menu />
-            <div className="flex flex-row mt-4 max-xl:grid xl:flex drop-shadow-xl">
+            <div className="flex flex-row mt-6 max-xl:grid xl:flex drop-shadow-xl">
                 <div className="my-2 ml-12 md:mx-24 xl:mr-0 xl:ml-36 xl:basis-2/6">
                 {about.map((post: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; content: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) =>
                     <div key={post.id}>

@@ -64,7 +64,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder='Nome'
-            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60 dark:bg-slate-900'
+            className='p-2 mt-3 border-2 border-yellow-200 rounded-lg placeholder:opacity-70 w-72 border-opacity-60 dark:bg-slate-900 '
           />
           <input
             type="email"
@@ -90,7 +90,7 @@ export default function ContactForm() {
           alt="Binga e o Sol"
           width={300}
           height={200}
-          className="w-full mb-20 ml-12 max-lg:ml-2 max-lg:justify-center opacity-70 drop-shadow-2xl"
+          className="w-full mb-20 ml-12 max-sm:w-auto max-lg:ml-2 max-lg:justify-center opacity-70 drop-shadow-2xl"
         />
       </div>
     </div>

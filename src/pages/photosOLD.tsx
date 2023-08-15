@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 import Image from 'next/image'
 import React from 'react'
 import fsPromises from 'fs/promises';
@@ -28,6 +28,11 @@ export default function ModalPhotos(props: { photos: any; }) {
     setIsOpen("")
     }
 
+    const navRef = useRef<HTMLElement | null>(null);
+    const showPhotos = () => {
+        navRef.current?.classList.toggle('hidden');
+    }
+
     return (
         <>
             <Head>
@@ -38,7 +43,8 @@ export default function ModalPhotos(props: { photos: any; }) {
             <Menu />
             <div>
                 <div className="w-full mb-10 h-fit">
-                    <div className="grid grid-cols-2 cursor-pointer lg:grid-cols-4">
+                    <button onClick={showPhotos}>Open</button>
+                    <nav ref={navRef} className="hidden grid-cols-2 cursor-pointer lg:grid-cols-4">
                         {photos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string }) =>
                             <MotionConfig>
                                 <motion.div
@@ -64,7 +70,7 @@ export default function ModalPhotos(props: { photos: any; }) {
                                 </motion.div>
                             </MotionConfig>
                         )}
-                    </div>
+                    </nav>
                 </div>
 
                 <Transition appear show={!!isOpen} as={Fragment}>

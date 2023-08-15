@@ -19,7 +19,7 @@ module.exports = {
         noto: ['var(--font-noto)']
       },
       backgroundImage: {
-        bingabg: "url('https://terno-do-binga.s3.us-east-2.amazonaws.com/files/bg-art.png')"
+        bingabg: "url('https://terno-do-binga.s3.us-east-2.amazonaws.com/files/fanfarrice%40alexandrebiciati-33.jpg')"
       }
     },
   },
