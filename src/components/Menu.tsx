@@ -1,6 +1,6 @@
 import { MotionConfig, motion } from "framer-motion"
 import Image from 'next/image'
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import Link from "next/link"
 import { SiYoutube, SiInstagram } from "react-icons/si";
 import { FiMail } from "react-icons/fi";

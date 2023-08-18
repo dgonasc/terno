@@ -35,7 +35,7 @@ interface TabProps {
 
     return (
         <>
-            <h1 className='flex justify-center m-4 mt-4 text-4xl lg:text-6xl dark:text-gray-300'>Pesquisa</h1>
+            <h1 className='flex justify-center m-4 mt-10 text-4xl lg:text-6xl dark:text-gray-300'>Pesquisa</h1>
             <div className='grid m-2 mt-8 lg:flex'>
                 <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-lg:grid-flow-col max-lg:grid-rows-2 lg:ml-12 xl:ml-36 lg:basis-2/6'>
                     {tabs.map((tab, index) => (

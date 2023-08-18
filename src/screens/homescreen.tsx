@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 import VideoHome from "@/components/VideoHome";
 import Image from "next/image";
-import { MotionValue, animate, animateValue, motion, motionValue } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function HomeScreen() {
     const [isHovering, setIsHovered] = useState(false);

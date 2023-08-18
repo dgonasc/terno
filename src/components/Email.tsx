@@ -55,7 +55,7 @@ export default function ContactForm() {
       <div className='grid justify-center text-center'>
         <div className="grid text-gray-600 font-xilosa">
           <h2 className="text-2xl">Contato</h2>
-          <h3>ternodobinga@gmail.com</h3>
+          <h3>contato@ternodobinga.com.br</h3>
         </div>
         <form onSubmit={handleSubmit} className='grid items-center justify-center mb-20 text-gray-700 font-xilosa'>
           <input

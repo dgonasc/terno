@@ -23,12 +23,12 @@ export default function me() {
                     />
                     <div className="grid items-center justify-center">
                         <h1 className="-ml-6 text-5xl text-white drop-shadow-2xl max-lg:text-3xl max-lg:ml-4">Terno do Binga</h1>
-                        <h3 className="text-2xl text-white max-lg:text-xl drop-shadow-2xl">ternodobinga@gmail.com</h3>
+                        <h3 className="text-2xl text-white max-lg:text-xl drop-shadow-2xl">contato@ternodobinga.com.br</h3>
                     </div>
                 </div>
                 <div className="grid justify-center mt-5">
                     <ul className="w-full">
-                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
+                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-600 shadow-black">
                             <Link href="https://instagram.com/ternodobinga" className='flex items-center justify-center max-lg:mx-20 mx-44' target="blank">
                                 <Image
                                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/instagramIcon.png"
@@ -41,7 +41,7 @@ export default function me() {
                                 <h2 className="ml-5 text-2xl">Instagram</h2>
                             </Link>
                         </li>
-                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
+                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-600 shadow-black">
                             <Link href="https://www.youtube.com/@TernoDoBinga"className='flex items-center justify-center max-lg:mx-20 mx-44' target="blank">
                                 <Image
                                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/youtubeIcon.png"
@@ -54,7 +54,7 @@ export default function me() {
                                 <h2 className="ml-10 text-2xl">Youtube</h2>
                             </Link>
                         </li>
-                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
+                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-600 shadow-black">
                             <Link href="/" className="flex items-center justify-center mx-44 max-lg:mx-20">
                                 <Image
                                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo-2.png"
@@ -67,7 +67,7 @@ export default function me() {
                                 <h2 className="ml-10 text-2xl">WebSite</h2>
                             </Link>
                         </li>
-                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-500 shadow-black">
+                        <li className="m-4 rounded-full shadow-xl bg-gradient-to-b from-white to-yellow-600 shadow-black">
                             <Link href="/download" className="flex items-center justify-center mx-44 max-lg:mx-20">
                                 <Image
                                 src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/downloadIcon.png"
