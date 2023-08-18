@@ -42,8 +42,8 @@ interface TabProps {
                     <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white border-2 border-yellow-100 shadow-lg dark:border-zinc-400 dark:shadow-zinc-400 shadow-yellow-50 rounded-xl lg:h-36 h-14 max-lg:w-28 hover:opacity-70"
                         key={index}
                         onClick={() => handleTabClick(index)}
-                        // style={{backgroundColor: activeTab === index ? '#90EE90' : 'white'}}
-                        style={{backgroundColor: activeTab === index ? '#90EE90' : 'white'}}
+                        // style={{backgroundColor: activeTab === index ? '#4ade80' : 'white'}}
+                        style={{backgroundColor: activeTab === index ? '#4ade80' : 'white'}}
                         // {{ fontWeight: activeTab === index ? 'bold' : 'normal' }}
                     >
                         <div className='items-center justify-center hidden w-1/3 my-2 bg-cover lg:flex rounded-xl bg-landscape'>

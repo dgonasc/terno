@@ -32,6 +32,8 @@ export default function ModalPhotos(props: { photos: any }) {
 
     const navRef = useRef<HTMLElement | null>(null);
     const [selectedAlbum, setSelectedAlbum] = useState("1");
+    const [clickedButtonId, setClickedButtonId] = useState("1");
+
 
         //  Albums
         // 1 - Humaitá
@@ -41,38 +43,17 @@ export default function ModalPhotos(props: { photos: any }) {
         // 5 - Outros
         // 6 - Honks
 
-    const showPhotos = (albumId: string) => {
+    const showPhotos = (albumId: string, buttonId: string) => {
+        navRef.current?.classList.add('hidden');
         navRef.current?.classList.toggle('hidden');
         setSelectedAlbum(albumId);
+        setClickedButtonId(buttonId);
     }
+
 
     const filteredPhotos = photos.filter((photo: { id: Key | null | undefined; image: string; description: string, author: string, album: any }) => {
         return photo.album === selectedAlbum;
     });
-
-    const openAlbum = filteredPhotos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string, album: any }) => (
-        <div key={photo.id}>
-            <MotionConfig>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    key={photo.id}
-                    className="m-3 overflow-hidden">
-                    <Image
-                        key={photo.id}
-                        src={photo.image}
-                        alt={photo.author}
-                        width={300}
-                        height={180}
-                        className="w-full rounded-lg hover:opacity-70"
-                        onClick={() => setIsOpen(photo.image)}
-                    />
-                </motion.div>
-            </MotionConfig>
-        </div>
-    ));
-
 
     return (
         <div>
@@ -84,46 +65,76 @@ export default function ModalPhotos(props: { photos: any }) {
             <Menu />
             <div>
                 <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl dark:text-zinc-300'>Fotos</h1>
-                    <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3'>
-                        <button onClick={() => showPhotos("1")} id='1' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                        <button onClick={() => showPhotos("2")} id='2' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Mestre Anderson Miguel</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                        <button onClick={() => showPhotos("3")} id='3' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Fanfarrice</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                        {/* <button onClick={() => showPhotos("4")} id='4' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Avenidinha</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button> */}
-                        <button onClick={() => showPhotos("5")} id='5' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Outros</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                        <button onClick={() => showPhotos("6")} id='6' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Honk's</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                        <button onClick={() => showPhotos("7")} id='7' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Flyers Eventos</h3>
-                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-                        </button>
-                    </nav>
+                <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3'>
+                    <button onClick={() => showPhotos("1", "1")} id='1' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    <button onClick={() => showPhotos("2", "2")} id='2' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "2" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Mestre Anderson Miguel</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    <button onClick={() => showPhotos("3", "3")} id='3' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "3" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Fanfarrice</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    {/* <button onClick={() => showPhotos("4", "4")} id='4' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "4" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Avenidinha</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button> */}
+                    <button onClick={() => showPhotos("5", "5")} id='5' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "5" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Outros</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    <button onClick={() => showPhotos("6", "6")} id='6' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "6" ? 'dark:bg-green-700 bg-green-400' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Honk's</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    <button onClick={() => showPhotos("7", "7")} id='7' className={`flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2
+                    border-green-700 rounded-lg dark:bg-slate-600 ${clickedButtonId === "7" ? 'dark:bg-green-700 bg-green-200' : ""}`}>
+                        <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Flyers Eventos</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                </nav>
 
                 <div className='border-separate '>
                     <div>
                         <nav ref={navRef} className="mb-24 ">
                             <div className="cursor-pointer columns-2 sm:columns-4 lg:columns-5">
-                                {openAlbum}
+                                {filteredPhotos.map((photo: { id: Key | null | undefined; image: string; description: string, author: string, album: any }) => (
+                                    <div key={photo.id}>
+                                        <MotionConfig>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                key={photo.id}
+                                                className="m-3">
+                                                <div className=''>
+                                                    <Image
+                                                    key={photo.id}
+                                                    src={photo.image}
+                                                    alt={photo.author}
+                                                    width={300}
+                                                    height={180}
+                                                    className="w-full rounded-lg hover:opacity-70"
+                                                    onClick={() => setIsOpen(photo.image)}
+                                                    />
+                                                    {/* <p className='mt-1 ml-4 text-sm dark:text-slate-400'>{photo.author}</p> */}
+                                                </div>
+                                            </motion.div>
+                                        </MotionConfig>
+                                    </div>
+                                ))}
                             </div>
                         </nav>
                     </div>
-
                 </div>
                 <div>
                     <Transition appear show={!!isOpen} as={Fragment}>
