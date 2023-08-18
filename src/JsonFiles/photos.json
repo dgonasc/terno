@@ -391,68 +391,76 @@
             "description":"Ensaio Praça Terno do Binga",
             "author":"Autor Desconhecido",
             "album":"5"
-        }
-    ],
-    "flyers": [
+        },
         {
             "id":"61",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/e32a0350-c062-4378-be18-f69ae6486958.JPG",
             "description":"Casa Fúnebre - Nilton Jr e o Coco do Pajé",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"62",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/fac44d27-8925-4f13-9752-b681447ecd9c.JPG",
             "description":"Sula",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"63",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3617.jpg",
             "description":"Honk BH",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"64",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3615.jpg",
             "description":"Feira Nacional de Artesanato Expominas 2022",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"65",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/IMG_3614.jpg",
             "description":"Feira Nacional de Artesanato Expominas 2022",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"66",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/49957c1e-7118-440d-a599-4e2ba99a2a0f.JPG",
             "description":"Arrastão de Carnaval Humaitá",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"67",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/341347024_1150124612518380_315899262850476312_n.webp.jpeg",
             "description":"Honk POA",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"68",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/1b83afce-7ef3-45f0-9db1-038c3c671825.JPG",
             "description":"Fanfarrice 2023 - Praça Pisa na Fulô",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"69",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/6d708efd-2e6d-4e03-b160-54463b3b7170.JPG",
             "description":"Fanfarrice 2023 - Praça Pisa na Fulô",
-            "author":" "
+            "author":" ",
+            "album":"7"
         },
         {
             "id":"70",
             "image":"https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/flyers/avenidinha_post_laranja.PNG",
             "description":"Buteco D'Avenidinha",
-            "author":" "
+            "author":" ",
+            "album":"7"
         }
     ]
 }

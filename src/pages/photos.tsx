@@ -101,12 +101,16 @@ export default function ModalPhotos(props: { photos: any }) {
                             <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Avenidinha</h3>
                             <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                         </button> */}
+                        <button onClick={() => showPhotos("5")} id='5' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
+                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Outros</h3>
+                            <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                        </button>
                         <button onClick={() => showPhotos("6")} id='6' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
                             <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Honk's</h3>
                             <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                         </button>
-                        <button onClick={() => showPhotos("5")} id='5' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
-                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Outros</h3>
+                        <button onClick={() => showPhotos("7")} id='7' className="flex items-center justify-center p-2 mx-2 mb-4 bg-white border-2 border-green-700 rounded-lg dark:bg-slate-600">
+                            <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Flyers Eventos</h3>
                             <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                         </button>
                     </nav>
