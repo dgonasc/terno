@@ -39,7 +39,7 @@ interface TabProps {
             <div className='grid m-2 mt-8 lg:flex'>
                 <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-lg:grid-flow-col max-lg:grid-rows-2 lg:ml-12 xl:ml-36 lg:basis-2/6'>
                     {tabs.map((tab, index) => (
-                    <button className="flex items-center w-auto gap-2 my-1 overflow-hidden bg-white border-2 border-yellow-100 shadow-lg dark:border-zinc-400 dark:shadow-zinc-400 shadow-yellow-50 rounded-xl lg:h-36 h-14 max-lg:w-28"
+                    <button className="flex items-center justify-center w-auto h-12 gap-2 my-1 overflow-hidden bg-white shadow-lg dark:shadow-zinc-600 shadow-yellow-50 rounded-xl lg:h-28 max-lg:w-28"
                         key={index}
                         onClick={() => handleTabClick(index)}
                         style={{backgroundColor: activeTab === index ? '#4ade80' : 'white'}}
@@ -53,7 +53,7 @@ interface TabProps {
                             />
                         </div>
                             <div className='grid w-2/3'>
-                                <h3 className='mt-2 text-xs font-bold text-gray-900 xl:text-xl lg:text-sm'>
+                                <h3 className='text-sm font-bold text-gray-900 text-centermt-2 xl:text-xl lg:text-sm'>
                                     {tab.label}
                                 </h3>
                                 <p className='hidden mt-1 text-gray-600 xl:text-lg lg:text-xs lg:flex'>

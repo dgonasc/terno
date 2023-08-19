@@ -45,7 +45,7 @@ export default function About(props: { about: any; }) {
                         height={480}
                         className="relative w-full mt-16 mb-4 border-2 border-yellow-400 rounded-lg shadow-md opacity-90 shadow-black"
                     />
-                    <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4 dark:text-gray-300">Foto: @quem.e.matheus</h3>
+                    <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4 dark:text-gray-300">Foto: @luciano.baeta</h3>
                 </div>
             </div>
             <Footer />

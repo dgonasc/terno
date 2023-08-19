@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import VideoHome from "@/components/VideoHome";
 import Image from "next/image";
 import { motion } from "framer-motion"
+import { Spotify } from "@/components/Spotify";
+import ContactForm from "@/components/Email"
 
 export default function HomeScreen() {
     const [isHovering, setIsHovered] = useState(false);
@@ -40,7 +42,22 @@ export default function HomeScreen() {
                 </div>
                 <div>{VideoHome()}</div>
             </div>
-            <div className="flex justify-between gap-8 mx-8 mb-8 2xl:my-32 2xl:mx-48">
+
+            <div className="flex items-center justify-center sm:m-5 sm:mt-16 sm:mb-24 max-sm:mb-10 sm:justify-between xl:justify-center mx-36">
+                <Image
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
+                    alt="Arvore Rosa"
+                    width={300}
+                    height={180}
+                    className="hidden ml-8 sm:w-1/3 sm:mr-24 lg:ml-16 xl:mr-36 xl:w-1/6 dark:opacity-70 opacity-80 sm:flex"
+                />
+                <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
+                    className="sm:mt-16 sm:mr-10 xl:w-1/3"
+                />
+            </div>
+
+            {/* Botões com animação */}
+            <div className="flex justify-between gap-8 mx-8 mb-20 2xl:my-32 2xl:mx-48">
                 <motion.button
                     animate={isHovering ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
                     // onMouseEnter={onMouseEnter}
@@ -137,6 +154,8 @@ export default function HomeScreen() {
                                     />)}
                 </motion.button>
             </div>
+
+            <ContactForm />
             <Footer />
         </>
     )

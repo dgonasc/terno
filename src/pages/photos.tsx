@@ -65,31 +65,31 @@ export default function ModalPhotos(props: { photos: any }) {
             <div>
                 <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl dark:text-zinc-300'>Fotos</h1>
                 <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
-                    <button onClick={() => showPhotos("1", "1")} id='1' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("1", "1")} id='1' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
-                    <button onClick={() => showPhotos("2", "2")} id='2' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "2" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("2", "2")} id='2' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "2" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Mestre Anderson Miguel</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
-                    <button onClick={() => showPhotos("3", "3")} id='3' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "3" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("3", "3")} id='3' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "3" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Fanfarrice</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
-                    {/* <button onClick={() => showPhotos("4", "4")} id='4' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "4" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    {/* <button onClick={() => showPhotos("4", "4")} id='4' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "4" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Avenidinha</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button> */}
-                    <button onClick={() => showPhotos("6", "6")} id='6' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "6" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("6", "6")} id='6' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "6" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Honk's</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
-                    <button onClick={() => showPhotos("7", "7")} id='7' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "7" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("7", "7")} id='7' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "7" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Flyers Eventos</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
-                    <button onClick={() => showPhotos("5", "5")} id='5' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "5" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                    <button onClick={() => showPhotos("5", "5")} id='5' className={`flex items-center justify-center p-2 mx-2 mb-4 rounded-lg  ${clickedButtonId === "5" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Outros</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>

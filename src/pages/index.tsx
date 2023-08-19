@@ -1,4 +1,3 @@
-import ContactForm from "@/components/Email"
 import Menu from "@/components/Menu"
 import HomeScreen from "@/screens/homescreen"
 import Head from "next/head"
@@ -13,7 +12,6 @@ export default function Home() {
       </Head>
       <Menu />
       <HomeScreen />
-      <ContactForm />
     </>
     )
 }
