@@ -64,7 +64,7 @@ export default function ModalPhotos(props: { photos: any }) {
             <Menu />
             <div>
                 <h1 className='flex justify-center m-4 mt-8 text-4xl lg:text-6xl dark:text-zinc-300'>Fotos</h1>
-                <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3'>
+                <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
                     <button onClick={() => showPhotos("1", "1")} id='1' className={`flex items-center justify-center p-2 mx-2 mb-4  border-2 border-green-700 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
