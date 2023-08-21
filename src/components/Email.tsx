@@ -90,7 +90,7 @@ export default function ContactForm() {
           alt="Binga e o Sol"
           width={300}
           height={200}
-          className="w-full mb-20 ml-12 max-sm:w-auto max-lg:ml-2 max-lg:justify-center opacity-70 drop-shadow-2xl"
+          className="w-full mb-20 ml-12 max-sm:w-5/6 max-lg:ml-8 max-lg:justify-center opacity-70 drop-shadow-2xl"
         />
       </div>
     </div>
