@@ -45,27 +45,27 @@ export default function Menu() {
                             >
                                 <ul className="z-40 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
                                     <li className="max-lg:pb-3">
-                                        <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg">
+                                        <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg">
                                             início
                                         </Link>
                                     </li>
                                     <li  className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/about">
+                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/about">
                                             sobre
                                         </Link>
                                     </li>
                                     <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/photos">
+                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/photos">
                                             fotos
                                         </Link>
                                     </li>
                                     <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/search">
+                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/search">
                                             pesquisa
                                         </Link>
                                     </li>
                                     <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/download">
+                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/download">
                                             downloads
                                         </Link>
                                     </li>
@@ -77,7 +77,7 @@ export default function Menu() {
                                 initial={{ y: -100 }}
                                 animate={{ y: 3 }}
                                 transition={{ delay: 1.5 }}
-                                className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-200 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 max-lg:absolute max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:rounded-lg">
+                                className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 max-lg:absolute max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:rounded-lg">
                                     <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiYoutube/></a>
                                     <a href='https://instagram.com/ternodobinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiInstagram/></a>
                                     <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer drop-shadow-xl'><FiMail/></a>
