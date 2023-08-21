@@ -158,8 +158,8 @@ export default function ModalPhotos(props: { photos: any }) {
                                                 onClick={closeModal}
                                                 className="z-50 w-screen rounded-md"
                                                 src={isOpen}
-                                                height={480}
-                                                width={300}
+                                                height={720}
+                                                width={480}
                                                 alt={isOpen}
                                             />
                                         </Dialog.Panel>
