@@ -146,8 +146,8 @@ export default function HomeScreen() {
 
             <div className="flex items-center justify-between mb-6 bg-green-700 border-2 border-green-700 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-10">
                 <Image
-                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
-                    alt="Arvore Rosa"
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
+                    alt="Arvore Vermelha"
                     width={300}
                     height={180}
                     className="hidden w-24 ml-6 2xl:ml-24 lg:ml-8 sm:flex"
@@ -156,11 +156,11 @@ export default function HomeScreen() {
                     className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
                 />
                 <Image
-                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
                     alt="Arvore Rosa"
                     width={300}
                     height={180}
-                    className="hidden w-24 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
+                    className="hidden w-20 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
                 />
             </div>
 
