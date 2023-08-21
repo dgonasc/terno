@@ -14,9 +14,9 @@ allow?: string
 export const Spotify = ({
     link,
     style = {},
-    wide = false,
+    wide = true,
     width = wide ? "100%" : 600,
-    height = wide ? 80 : 380,
+    height = wide ? 152 : 280,
     frameBorder = 0,
     allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
     ...props

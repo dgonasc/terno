@@ -43,19 +43,6 @@ export default function HomeScreen() {
                 <div>{VideoHome()}</div>
             </div>
 
-            <div className="flex items-center justify-center sm:m-5 sm:mt-16 sm:mb-24 max-sm:mb-10 sm:justify-between xl:justify-center mx-36">
-                <Image
-                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
-                    alt="Arvore Rosa"
-                    width={300}
-                    height={180}
-                    className="hidden ml-8 sm:w-1/3 sm:mr-24 lg:ml-16 xl:mr-36 xl:w-1/6 dark:opacity-70 opacity-80 sm:flex"
-                />
-                <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
-                    className="sm:mt-16 sm:mr-10 xl:w-1/3"
-                />
-            </div>
-
             {/* Botões com animação */}
             <div className="flex justify-between gap-8 mx-8 mb-20 2xl:my-32 2xl:mx-48">
                 <motion.button
@@ -156,6 +143,20 @@ export default function HomeScreen() {
             </div>
 
             <ContactForm />
+
+            <div className="flex items-center justify-between mb-6 bg-green-700 border-2 border-green-700 sm:p-3 xl:p-10">
+                <Image
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
+                    alt="Arvore Rosa"
+                    width={300}
+                    height={180}
+                    className="hidden ml-10 mr-28 2xl:ml-64 sm:w-24 xl:w-28 sm:flex"
+                />
+                <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
+                    className="mb-1 sm:mr-5 xl:w-2/3"
+                />
+            </div>
+
             <Footer />
         </>
     )
