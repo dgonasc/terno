@@ -144,14 +144,14 @@ export default function HomeScreen() {
 
             <ContactForm />
 
-            <div className="flex items-center justify-between mb-6 bg-green-700 border-2 border-green-700 sm:p-3 xl:p-10">
-                <Image
+            <div className="flex items-center justify-center mb-6 bg-green-700 border-2 border-green-700 sm:p-3 xl:p-10">
+                {/* <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
                     alt="Arvore Rosa"
                     width={300}
                     height={180}
                     className="hidden ml-10 mr-28 2xl:ml-64 sm:w-24 xl:w-28 sm:flex"
-                />
+                /> */}
                 <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
                     className="mb-1 sm:mr-5 xl:w-2/3"
                 />
