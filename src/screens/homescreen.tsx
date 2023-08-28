@@ -56,7 +56,7 @@ export default function HomeScreen() {
                             alt="Art Yelow"
                             width={200}
                             height={200}
-                            className="relative z-0 w-full rounded-full"
+                            className="relative z-0 rounded-full w-44 xl:w-full"
                             onClick={() => setIsHovered(onMouseLeave => !onMouseLeave)}
                         /> ) :(
                             <Image
@@ -64,7 +64,7 @@ export default function HomeScreen() {
                                 alt="Art Yelow"
                                 width={200}
                                 height={200}
-                                className="w-full rounded-full animate-pulse"
+                                className="rounded-full w-44 xl:w-full animate-pulse"
                                 onClick={() => setIsHovered(onMouseEnter => !onMouseEnter)}
                             />)}
                 </motion.button>
@@ -80,7 +80,7 @@ export default function HomeScreen() {
                             alt="Art Blue"
                             width={200}
                             height={200}
-                            className="w-full rounded-full"
+                            className="rounded-full w-44 xl:w-full"
                             onClick={() => setIsHovered2(onMouseLeave2 => !onMouseLeave2)}
                         />) : (
                             <Image
@@ -88,7 +88,7 @@ export default function HomeScreen() {
                                 alt="Art Blue"
                                 width={200}
                                 height={200}
-                                className="w-full rounded-full animate-pulse"
+                                className="rounded-full w-44 xl:w-full animate-pulse"
                                 onClick={() => setIsHovered2(onMouseEnter2 => !onMouseEnter2)}
                             />)}
                 </motion.button>
@@ -104,7 +104,7 @@ export default function HomeScreen() {
                             alt="Art Yellow"
                             width={200}
                             height={200}
-                            className="w-full rounded-full"
+                            className="rounded-full w-44 xl:w-full"
                             onClick={() => setIsHovered3(onMouseLeave3 => !onMouseLeave3)}
                         /> ) : (
                             <Image
@@ -112,7 +112,7 @@ export default function HomeScreen() {
                                 alt="Art Yellow"
                                 width={200}
                                 height={200}
-                                className="w-full rounded-full animate-pulse"
+                                className="rounded-full w-44 xl:w-full animate-pulse"
                                 onClick={() => setIsHovered3(onMouseEnter3 => !onMouseEnter3)}
                             />)}
                 </motion.button>
@@ -128,7 +128,7 @@ export default function HomeScreen() {
                                 alt="Art Red"
                                 width={200}
                                 height={200}
-                                className="w-full rounded-full"
+                                className="rounded-full w-44 xl:w-full"
                                 onClick={() => setIsHovered4(onMouseLeave4 => !onMouseLeave4)}
                             /> ) : (
                                     <Image
@@ -136,15 +136,13 @@ export default function HomeScreen() {
                                         alt="Art Red"
                                         width={200}
                                         height={200}
-                                        className="w-full rounded-full animate-pulse"
+                                        className="rounded-full w-44 xl:w-full animate-pulse"
                                         onClick={() => setIsHovered4(onMouseEnter4 => !onMouseEnter4)}
                                     />)}
                 </motion.button>
             </div>
 
-            <ContactForm />
-
-            <div className="flex items-center justify-between mb-6 bg-green-700 border-2 border-green-700 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-10">
+            <div className="flex items-center justify-between mb-24 border-2 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-10">
                 <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
                     alt="Arvore Vermelha"
@@ -152,7 +150,10 @@ export default function HomeScreen() {
                     height={180}
                     className="hidden w-24 ml-6 2xl:ml-24 lg:ml-8 sm:flex"
                 />
-                <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
+                {/* <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
+                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
+                /> */}
+                <Spotify wide link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83"
                     className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
                 />
                 <Image
@@ -163,6 +164,8 @@ export default function HomeScreen() {
                     className="hidden w-20 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
                 />
             </div>
+
+            <ContactForm />
 
             <Footer />
         </>

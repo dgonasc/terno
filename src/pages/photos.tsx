@@ -108,17 +108,20 @@ export default function ModalPhotos(props: { photos: any }) {
                                                 exit={{ opacity: 0 }}
                                                 key={photo.id}
                                                 className="m-3">
-                                                <div className=''>
+                                                <div className='relative'>
                                                     <Image
                                                     key={photo.id}
                                                     src={photo.image}
                                                     alt={photo.author}
                                                     width={300}
                                                     height={180}
-                                                    className="w-full rounded-lg hover:opacity-70"
-                                                    onClick={() => setIsOpen(photo.image)}
+                                                    className="z-40 w-full rounded-lg"
                                                     />
-                                                    {/* <p className='mt-1 ml-4 text-sm dark:text-slate-400'>{photo.author}</p> */}
+                                                    <a className='absolute inset-0 z-10 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
+                                                        onClick={() => setIsOpen(photo.image)}>
+                                                        <h3 className='mt-2 text-sm text-center bg-opacity-50 rounded-lg lg:mt-4 xl:mt-8 bg-slate-200 lg:text-lg 2xl:text-3xl text-blue-950'>foto: {photo.author}</h3>
+                                                        <p className='mt-1 text-xs text-center bg-opacity-50 rounded-lg lg:mt-2 xl:mt-2 bg-slate-200 lg:text-sm xl:text-2xl text-blue-950'>{photo.description}</p>
+                                                    </a>
                                                 </div>
                                             </motion.div>
                                         </MotionConfig>

@@ -48,6 +48,7 @@ export default function About(props: { about: any; }) {
                     <h3 className="mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4 dark:text-gray-300">Foto: @luciano.baeta</h3>
                 </div>
             </div>
+
             <Footer />
         </>
     )
