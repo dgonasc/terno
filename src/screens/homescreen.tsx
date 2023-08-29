@@ -44,7 +44,7 @@ export default function HomeScreen() {
             </div>
 
             {/* Botões com animação */}
-            <div className="flex justify-between gap-8 mx-8 mb-20 2xl:my-32 2xl:mx-48">
+            <div className="flex justify-between gap-8 mx-8 mb-10 2xl:my-32 2xl:mx-48">
                 <motion.button
                     animate={isHovering ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
                     // onMouseEnter={onMouseEnter}
@@ -142,7 +142,7 @@ export default function HomeScreen() {
                 </motion.button>
             </div>
 
-            <div className="flex items-center justify-between mb-24 border-2 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-10">
+            <div className="flex items-center justify-between mb-24 border-2 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
                 <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
                     alt="Arvore Vermelha"

@@ -12,18 +12,18 @@ export default function me() {
                 <meta property="og:title" content="Links Terno do Binga" />
             </Head>
             <div className="h-screen bg-blue-950">
-                <div className="grid items-center justify-center lg:ml-12">
+                <div className="grid items-center justify-center max-sm:ml-6 lg:ml-12">
                     <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG"
                     alt='Logo Terno do Binga'
-                    className='m-2 mt-10 rounded-full ml-9 w-36 drop-shadow-2xl max-lg:w-24 max-lg:ml-14'
+                    className='m-2 mt-10 ml-20 rounded-full lg:ml-6 w-36 drop-shadow-2xl max-lg:w-24 max-sm:ml-14'
                     width={300}
                     height={180}
                     id='logo'
                     />
                     <div className="grid items-center justify-center">
-                        <h1 className="-ml-6 text-5xl text-white drop-shadow-2xl max-lg:text-3xl max-lg:ml-4">Terno do Binga</h1>
-                        <h3 className="mt-4 -ml-6 text-2xl text-white max-lg:text-xl drop-shadow-2xl">contato@ternodobinga.com.br</h3>
+                        <h1 className="text-5xl text-white ml-9 lg:-ml-9 max-sm:ml-4 drop-shadow-2xl max-lg:text-3xl">Terno do Binga</h1>
+                        <h3 className="mt-4 ml-2 text-2xl text-white lg:-ml-10 max-sm:-ml-4 max-lg:text-xl drop-shadow-2xl">contato@ternodobinga.com.br</h3>
                     </div>
                 </div>
                 <div className="grid justify-center mt-1">
