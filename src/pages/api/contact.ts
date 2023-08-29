@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/EmailTemplate';
 import { Resend } from 'resend';
 
-  
-
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const resend = new Resend(process.env.RESEND_TOKEN);
 
@@ -11,8 +9,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { name, email, message } = req.body;
 
     const data = await resend.emails.send({
-      from: 'contato@ternodobinga.com.br',
-      to: ['ternodobinga@gmail.com'],
+      from: 'fale@ternodobinga.com.br',
+      to: ['contato@ternodobinga.com.br'],
       subject: 'Contato pelo Site',
       react: EmailTemplate({ name: name, email: email, message: message}),
     });
