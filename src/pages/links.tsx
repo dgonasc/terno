@@ -3,7 +3,7 @@ import Image from "next/image"
 import Footer from "@/components/Footer"
 import Head from "next/head"
 
-export default function me() {
+export default function links() {
     return (
         <>
             <Head>
