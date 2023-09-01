@@ -117,10 +117,10 @@ export default function ModalPhotos(props: { photos: any }) {
                                                     height={180}
                                                     className="z-40 w-full rounded-lg"
                                                     />
-                                                    <a className='absolute inset-0 z-10 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
+                                                    <a className='absolute inset-0 z-0 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
                                                         onClick={() => setIsOpen(photo.image)}>
-                                                        <h3 className='mt-1 text-xs text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 text-slate-200 lg:mt-2 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-lg dark:text-blue-950'>{photo.description}</h3>
-                                                        <h4 className='mt-1 text-sm text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 lg:mt-2 xl:mt-4 text-slate-200 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-base dark:text-blue-950'>foto: {photo.author}</h4>
+                                                        <h3 className='z-10 mt-1 text-xs text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 text-slate-200 lg:mt-2 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-lg dark:text-blue-950'>{photo.description}</h3>
+                                                        <h4 className='z-10 mt-1 text-sm text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 lg:mt-2 xl:mt-4 text-slate-200 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-base dark:text-blue-950'>foto: {photo.author}</h4>
                                                     </a>
                                                 </div>
                                             </motion.div>
@@ -146,7 +146,7 @@ export default function ModalPhotos(props: { photos: any }) {
                             <div className="fixed inset-0 bg-black bg-opacity-25" />
                             </Transition.Child>
                             <div className="fixed inset-0 overflow-y-auto">
-                                <div className="z-40 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
+                                <div className="z-20 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
                                     <Transition.Child
                                         as={Fragment}
                                         enter="ease-out duration-300"

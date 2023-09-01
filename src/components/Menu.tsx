@@ -43,7 +43,7 @@ export default function Menu() {
                                 animate={{ y: 80 }}
                                 transition={{ delay: 1 }}
                             >
-                                <ul className="z-40 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
+                                <ul className="z-50 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-10 drop-shadow-md shadow-black max-lg:ml-6 max-lg:space-y-4">
                                     <li className="max-lg:pb-3">
                                         <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg">
                                             início
