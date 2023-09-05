@@ -64,7 +64,7 @@ export default function ModalPhotos(props: { photos: any }) {
             <Menu />
             <div>
                 <h1 className='flex justify-center m-4 mt-8 text-4xl 2xl:m-12 lg:text-6xl dark:text-zinc-300'>Fotos</h1>
-                <nav className='grid items-center justify-center grid-cols-2 mx-10 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
+                <nav className='grid items-center justify-center grid-cols-2 mx-10 xl:mb-14 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
                     <button onClick={() => showPhotos("1", "1")} id='1' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
@@ -87,6 +87,10 @@ export default function ModalPhotos(props: { photos: any }) {
                     </button>
                     <button onClick={() => showPhotos("7", "7")} id='7' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "7" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                         <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Flyers Eventos</h3>
+                        <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+                    </button>
+                    <button onClick={() => showPhotos("8", "8")} id='8' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "8" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                        <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Buteco D'Avenidinha</h3>
                         <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
                     </button>
                     <button onClick={() => showPhotos("5", "5")} id='5' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "5" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
@@ -119,8 +123,8 @@ export default function ModalPhotos(props: { photos: any }) {
                                                     />
                                                     <a className='absolute inset-0 z-0 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
                                                         onClick={() => setIsOpen(photo.image)}>
-                                                        <h3 className='z-10 mt-1 text-xs text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 text-slate-200 lg:mt-2 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-lg dark:text-blue-950'>{photo.description}</h3>
-                                                        <h4 className='z-10 mt-1 text-sm text-center bg-opacity-50 rounded-lg dark:bg-opacity-70 lg:mt-2 xl:mt-4 text-slate-200 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-base dark:text-blue-950'>foto: {photo.author}</h4>
+                                                        <h3 className='z-10 mt-2 text-sm text-center bg-opacity-50 dark:bg-opacity-70 text-slate-200 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-lg dark:text-slate-200'>{photo.description}</h3>
+                                                        <h4 className='z-10 mt-2 text-xs text-center bg-opacity-50 dark:bg-opacity-70 xl:mt-2 text-slate-200 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-base dark:text-slate-200'>foto: {photo.author}</h4>
                                                     </a>
                                                 </div>
                                             </motion.div>

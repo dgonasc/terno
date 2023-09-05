@@ -43,8 +43,31 @@ export default function HomeScreen() {
                 <div>{VideoHome()}</div>
             </div>
 
+            <div className="flex items-center justify-between border-2 max-lg:mt-14 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
+                <Image
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
+                    alt="Arvore Vermelha"
+                    width={300}
+                    height={180}
+                    className="hidden w-24 ml-6 2xl:ml-24 lg:ml-8 sm:flex"
+                />
+                {/* <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
+                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
+                /> */}
+                <Spotify wide link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83"
+                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
+                />
+                <Image
+                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
+                    alt="Arvore Rosa"
+                    width={300}
+                    height={180}
+                    className="hidden w-20 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
+                />
+            </div>
+
             {/* Botões com animação */}
-            <div className="flex justify-between gap-8 mx-8 mb-10 2xl:my-32 2xl:mx-48">
+            <div className="flex justify-between gap-8 mx-8 my-24 2xl:my-32 2xl:mx-48">
                 <motion.button
                     animate={isHovering ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
                     // onMouseEnter={onMouseEnter}
@@ -141,30 +164,6 @@ export default function HomeScreen() {
                                     />)}
                 </motion.button>
             </div>
-
-            <div className="flex items-center justify-between mb-24 border-2 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
-                <Image
-                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
-                    alt="Arvore Vermelha"
-                    width={300}
-                    height={180}
-                    className="hidden w-24 ml-6 2xl:ml-24 lg:ml-8 sm:flex"
-                />
-                {/* <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
-                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
-                /> */}
-                <Spotify wide link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83"
-                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
-                />
-                <Image
-                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreRosa.png"
-                    alt="Arvore Rosa"
-                    width={300}
-                    height={180}
-                    className="hidden w-20 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
-                />
-            </div>
-
             <ContactForm />
 
             <Footer />
