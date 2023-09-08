@@ -43,7 +43,7 @@ export default function HomeScreen() {
                 <div>{VideoHome()}</div>
             </div>
 
-            <div className="flex items-center justify-between border-2 max-lg:mt-14 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
+            <div className="flex items-center justify-between border-2 max-lg:mt-10 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
                 <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
                     alt="Arvore Vermelha"

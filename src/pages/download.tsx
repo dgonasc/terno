@@ -28,8 +28,13 @@ export default function Download() {
         <>
             <Head>
                 <title>Download - Terno do Binga</title>
-                <meta name="description" content="Downloads Terno do Binga" key="desc" />
-                <meta property="og:title" content="Downloads Terno do Binga" />
+                <meta name="description" content="O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural." key="desc" />
+                <meta property="og:title" content="Terno do Binga" />
+                <meta property="og:image" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG" />
+                <meta property="og:url" content="https://www.ternodobinga.com.br" />
+                <meta property="twitter:image" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG"/>
+                <meta property="twitter:card" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG"/>
+                <meta property="twitter:description" content="O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural." key="desc"/>
             </Head>
             <Menu />
             <h1 className='flex justify-center m-4 mt-10 text-4xl lg:text-6xl dark:text-gray-300'>Downloads</h1>
