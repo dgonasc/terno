@@ -25,18 +25,20 @@ export default function About(props: { about: any; }) {
         <>
             <Head>
                 <title>Sobre - Terno do Binga</title>
+                <meta name="og:locale" content="pt_BR"/>
+                <meta name="theme-color" content="#e6261c"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta property="description" content="O Terno do Binga é uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural." />
                 <meta property="og:title" content="Terno do Binga" />
                 <meta property="og:image" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG" />
                 <meta property="og:url" content="https://www.ternodobinga.com.br" />
+                <meta property="og:description" content="O Terno do Binga é uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural." />
                 <meta property="twitter:image" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG"/>
                 <meta property="twitter:card" content="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_RAINBOW.PNG"/>
                 <meta property="twitter:description" content="O Terno do Binga é uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural." key="frevo maracatu orquestra ciranda"/>
                 <meta property="twitter:title" content="Terno do Binga"/>
                 <meta property="language" content="Portuguese"/>
-                <meta property="og:description" content="O Terno do Binga é uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural." />
                 <meta charSet="UTF-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
             <Menu />
             <div className="flex flex-row mt-10 mb-24 max-xl:grid xl:flex drop-shadow-xl">
