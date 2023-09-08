@@ -8,6 +8,6 @@
   "/links": "pages/links.html",
   "/search": "pages/search.html",
   "/_error": "pages/_error.js",
-  "/about": "pages/about.js",
-  "/photos": "pages/photos.js"
+  "/photos": "pages/photos.js",
+  "/about": "pages/about.js"
 }

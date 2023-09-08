@@ -163,7 +163,7 @@ function ModalPhotos(props) {
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         property: "description",
                         content: "O Terno do Binga \xe9 uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural."
-                    }, "frevo maracatu orquestra ciranda"),
+                    }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         property: "og:title",
                         content: "Terno do Binga"
