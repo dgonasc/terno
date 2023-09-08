@@ -162,7 +162,7 @@ function ModalPhotos(props) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         name: "description",
-                        content: "O Terno do Binga \xe9 uma orquestra diferente, cuja maior inspira\xe7\xe3o s\xe3o os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural."
+                        content: "O Terno do Binga \xe9 uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras de Frevo."
                     }, "desc"),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         property: "og:title",
@@ -186,8 +186,12 @@ function ModalPhotos(props) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         property: "twitter:description",
-                        content: "O Terno do Binga \xe9 uma orquestra diferente, cuja maior inspira\xe7\xe3o s\xe3o os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural."
-                    }, "desc")
+                        content: "O Terno do Binga \xe9 uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras de Frevo."
+                    }, "desc"),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "twitter:title",
+                        content: "Terno do Binga"
+                    })
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Menu__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {}),
