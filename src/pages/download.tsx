@@ -8,7 +8,7 @@ export default function Download() {
 
     function DownloadRelease() {
         const link = document.createElement("a")
-        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/photos/1.jpg"
+        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Apresentacao.pdf"
         link.target = "_blank"
         document.body.appendChild(link)
         link.click()

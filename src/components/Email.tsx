@@ -51,7 +51,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="grid items-center justify-center sm:flex">
+    <div className="grid items-center justify-center pt-10 m-1 mb-7 lg:mb-9 sm:flex bg-gray-50 bg-opacity-80 dark:bg-slate-800">
       <div className='grid justify-center text-center'>
         <div className="grid text-gray-600 font-xilosa">
           <h2 className="text-2xl dark:text-slate-400">Contato</h2>

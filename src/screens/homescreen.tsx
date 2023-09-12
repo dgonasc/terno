@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import VideoHome from "@/components/VideoHome";
 import Image from "next/image";
 import { motion } from "framer-motion"
-import { Spotify } from "@/components/Spotify";
+// import { Spotify } from "@/components/Spotify";
 import ContactForm from "@/components/Email"
 
 export default function HomeScreen() {
@@ -30,7 +30,7 @@ export default function HomeScreen() {
 
     return (
         <>
-            <div className="grid items-start justify-center ">
+            <div className="grid items-start justify-center m-1 bg-gray-50 bg-opacity-80 dark:bg-slate-800">
                 <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
                     <h3 className="m-5 mx-12 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl dark:text-zinc-300">Terno do Binga</h3>
                     <p className="mx-10 mb-10 text-lg opacity-60 max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
@@ -40,10 +40,10 @@ export default function HomeScreen() {
                             </button>
                         </Link> */}
                 </div>
-                <div>{VideoHome()}</div>
             </div>
+            <div>{VideoHome()}</div>
 
-            <div className="flex items-center justify-between border-2 max-lg:mt-10 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
+            {/* <div className="flex items-center justify-between border-2 max-lg:mt-10 border-slate-50 bg-slate-50 dark:border-green-800 dark:bg-green-800 sm:p-3 xl:pt-5 xl:pb-4">
                 <Image
                     src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
                     alt="Arvore Vermelha"
@@ -51,9 +51,6 @@ export default function HomeScreen() {
                     height={180}
                     className="hidden w-24 ml-6 2xl:ml-24 lg:ml-8 sm:flex"
                 />
-                {/* <Spotify link="https://open.spotify.com/album/527y5zpqdZc446EbgWPd6c?si=J9Ubk3bvT-arFUpp2pMxxw"
-                    className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
-                /> */}
                 <Spotify wide link="https://open.spotify.com/track/5ihDGnhQgMA0F0tk9fNLlA?si=4472348a63dd4f83"
                     className="mb-1 sm:mx-6 xl:w-2/3 max-sm:my-2"
                 />
@@ -64,105 +61,107 @@ export default function HomeScreen() {
                     height={180}
                     className="hidden w-20 mr-6 2xl:mr-24 lg:mr-8 sm:flex"
                 />
-            </div>
+            </div> */}
 
             {/* Botões com animação */}
-            <div className="flex justify-between gap-8 mx-8 my-24 2xl:my-32 2xl:mx-48">
-                <motion.button
-                    animate={isHovering ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
-                    // onMouseEnter={onMouseEnter}
-                    // onMouseLeave={onMouseLeave}
-                >
-                    { isHovering ? (
-                        <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_yellow.png"
-                            alt="Art Yelow"
-                            width={200}
-                            height={200}
-                            className="relative z-0 rounded-full w-44 xl:w-full"
-                            onClick={() => setIsHovered(onMouseLeave => !onMouseLeave)}
-                        /> ) :(
+            <div className="">
+                <div className="flex justify-between gap-8 mx-8 my-12 2xl:my-32 2xl:mx-48">
+                    <motion.button
+                        animate={isHovering ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
+                        // onMouseEnter={onMouseEnter}
+                        // onMouseLeave={onMouseLeave}
+                    >
+                        { isHovering ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_yellow_1_1.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_yellow.png"
                                 alt="Art Yelow"
                                 width={200}
                                 height={200}
-                                className="rounded-full w-44 xl:w-full animate-pulse"
-                                onClick={() => setIsHovered(onMouseEnter => !onMouseEnter)}
-                            />)}
-                </motion.button>
+                                className="relative z-0 rounded-full w-44 xl:w-full"
+                                onClick={() => setIsHovered(onMouseLeave => !onMouseLeave)}
+                            /> ) :(
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_yellow_1_1.png"
+                                    alt="Art Yelow"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-full w-44 xl:w-full animate-pulse"
+                                    onClick={() => setIsHovered(onMouseEnter => !onMouseEnter)}
+                                />)}
+                    </motion.button>
 
-                <motion.button
-                    animate={isHovering2 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
-                    // onMouseEnter={onMouseEnter2}
-                    // onMouseLeave={onMouseLeave2}
-                >
-                    {isHovering2 ? (
-                        <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_blue.png"
-                            alt="Art Blue"
-                            width={200}
-                            height={200}
-                            className="rounded-full w-44 xl:w-full"
-                            onClick={() => setIsHovered2(onMouseLeave2 => !onMouseLeave2)}
-                        />) : (
+                    <motion.button
+                        animate={isHovering2 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
+                        // onMouseEnter={onMouseEnter2}
+                        // onMouseLeave={onMouseLeave2}
+                    >
+                        {isHovering2 ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_blue_1_1.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_blue.png"
                                 alt="Art Blue"
                                 width={200}
                                 height={200}
-                                className="rounded-full w-44 xl:w-full animate-pulse"
-                                onClick={() => setIsHovered2(onMouseEnter2 => !onMouseEnter2)}
-                            />)}
-                </motion.button>
+                                className="rounded-full w-44 xl:w-full"
+                                onClick={() => setIsHovered2(onMouseLeave2 => !onMouseLeave2)}
+                            />) : (
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_blue_1_1.png"
+                                    alt="Art Blue"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-full w-44 xl:w-full animate-pulse"
+                                    onClick={() => setIsHovered2(onMouseEnter2 => !onMouseEnter2)}
+                                />)}
+                    </motion.button>
 
-                <motion.button
-                    animate={isHovering3 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
-                    // onMouseEnter={onMouseEnter3}
-                    // onMouseLeave={onMouseLeave3}
-                >
-                    {isHovering3 ? (
-                        <Image
-                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_pink.png"
-                            alt="Art Yellow"
-                            width={200}
-                            height={200}
-                            className="rounded-full w-44 xl:w-full"
-                            onClick={() => setIsHovered3(onMouseLeave3 => !onMouseLeave3)}
-                        /> ) : (
+                    <motion.button
+                        animate={isHovering3 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
+                        // onMouseEnter={onMouseEnter3}
+                        // onMouseLeave={onMouseLeave3}
+                    >
+                        {isHovering3 ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_pink_1_1.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_pink.png"
                                 alt="Art Yellow"
                                 width={200}
                                 height={200}
-                                className="rounded-full w-44 xl:w-full animate-pulse"
-                                onClick={() => setIsHovered3(onMouseEnter3 => !onMouseEnter3)}
-                            />)}
-                </motion.button>
-
-                <motion.button
-                    animate={isHovering4 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
-                    // onMouseEnter={onMouseEnter4}
-                    // onMouseLeave={onMouseLeave4}
-                    >
-                        {isHovering4 ? (
-                            <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_red.png"
-                                alt="Art Red"
-                                width={200}
-                                height={200}
                                 className="rounded-full w-44 xl:w-full"
-                                onClick={() => setIsHovered4(onMouseLeave4 => !onMouseLeave4)}
+                                onClick={() => setIsHovered3(onMouseLeave3 => !onMouseLeave3)}
                             /> ) : (
-                                    <Image
-                                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_red_1_1.png"
-                                        alt="Art Red"
-                                        width={200}
-                                        height={200}
-                                        className="rounded-full w-44 xl:w-full animate-pulse"
-                                        onClick={() => setIsHovered4(onMouseEnter4 => !onMouseEnter4)}
-                                    />)}
-                </motion.button>
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_pink_1_1.png"
+                                    alt="Art Yellow"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-full w-44 xl:w-full animate-pulse"
+                                    onClick={() => setIsHovered3(onMouseEnter3 => !onMouseEnter3)}
+                                />)}
+                    </motion.button>
+
+                    <motion.button
+                        animate={isHovering4 ? { scale: [1, 1.2, 1.2, 1, 1], rotate: [270, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
+                        // onMouseEnter={onMouseEnter4}
+                        // onMouseLeave={onMouseLeave4}
+                        >
+                            {isHovering4 ? (
+                                <Image
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_red.png"
+                                    alt="Art Red"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-full w-44 xl:w-full"
+                                    onClick={() => setIsHovered4(onMouseLeave4 => !onMouseLeave4)}
+                                /> ) : (
+                                        <Image
+                                            src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Artboard_red_1_1.png"
+                                            alt="Art Red"
+                                            width={200}
+                                            height={200}
+                                            className="rounded-full w-44 xl:w-full animate-pulse"
+                                            onClick={() => setIsHovered4(onMouseEnter4 => !onMouseEnter4)}
+                                        />)}
+                    </motion.button>
+                </div>
             </div>
             <ContactForm />
 
