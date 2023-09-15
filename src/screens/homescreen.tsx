@@ -32,8 +32,8 @@ export default function HomeScreen() {
         <>
             <div className="grid items-start justify-center m-1 bg-gray-50 bg-opacity-80 dark:bg-slate-800">
                 <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
-                    <h3 className="m-5 mx-12 text-3xl max-sm:m-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl dark:text-zinc-300">Terno do Binga</h3>
-                    <p className="mx-10 mb-10 text-lg opacity-60 max-sm:m-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro do efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as culturas populares tradicionais brasileiras na cidade. O Terno do Binga é uma orquestra diferente, cuja maior inspiração são os ternos de Maracatu de Baque Solto e as orquestras cirandeiras, do Frevo e o Coco Rural.</p>
+                    <h3 className="m-5 mx-12 text-3xl max-sm:mx-8 max-sm:mt-8 max-sm:text-xl xl:text-6xl font-xilosa drop-shadow-xl dark:text-zinc-300">Terno do Binga</h3>
+                    <p className="mx-10 mb-10 text-lg opacity-60 max-sm:mx-8 max-sm:text-xs xl:text-xl xl:text-left">O Terno do Binga é fruto do encontro entre o efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as Culturas Populares Tradicionais brasileiras na cidade, resultando numa orquestra diferente, cuja maior inspiração são os Ternos de Maracatu de Baque Solto, as Cirandas da Zona da Mata Norte pernambucana e o Frevo, passando também por outras manifestações culturais, tais como o Coco Rural e o Bumba Boi Maranhense.</p>
                         {/* <Link href="/about" className="p-4 text-sm text-black border-solid rounded-md shadow-md max-sm:ml-8 max-sm:p-2 hover:opacity-60 font-xilosa hover:bg-corterceira/30 shadow-black">
                             <button>
                                 Saiba mais

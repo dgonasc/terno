@@ -22,7 +22,7 @@ export default function Menu() {
         style={{ zIndex: '4'}}
         >
             <div className="m-0 bg-white border-2 bg-opacity-90 dark:bg-slate-900 dark:border-t-black border-b-green-600 border-x-green-600 border-opacity-30 dark:border-opacity-20">
-                <div className='flex flex-row items-center justify-between lg:px-14 xl:mr-24'>
+                <div className='flex flex-row items-center justify-between lg:px-14 '>
                     <div>
                         <motion.button
                         animate= {isHovering ? { scale: [1, 1.5, 1.5, 1, 1], rotate: [0, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }

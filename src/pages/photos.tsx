@@ -119,10 +119,10 @@ export default function ModalPhotos(props: { photos: any }) {
                                                     height={180}
                                                     className="z-40 w-full rounded-lg"
                                                     />
-                                                    <a className='absolute inset-0 z-0 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
+                                                    <a className='absolute inset-0 z-0 duration-300 rounded-lg opacity-100 sm:opacity-0 sm:hover:opacity-100 hover:cursor-pointer '
                                                         onClick={() => setIsOpen(photo.image)}>
-                                                        <h3 className='z-10 mt-2 text-sm text-center bg-opacity-50 dark:bg-opacity-70 text-zinc-100 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-lg dark:text-zinc-200'>{photo.description}</h3>
-                                                        <h4 className='z-10 mt-2 text-xs text-center bg-opacity-50 dark:bg-opacity-70 xl:mt-2 text-zinc-100 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-base dark:text-zinc-200'>foto: {photo.author}</h4>
+                                                        <h3 className='z-10 mt-1 text-sm text-center bg-opacity-50 dark:bg-opacity-70 text-zinc-100 xl:mt-2 bg-slate-500 dark:bg-slate-400 lg:text-sm 2xl:text-lg dark:text-zinc-200'>{photo.description}</h3>
+                                                        <h4 className='z-10 mt-1 text-xs text-center bg-opacity-50 dark:bg-opacity-70 xl:mt-2 text-zinc-100 bg-slate-500 dark:bg-slate-400 lg:text-xs 2xl:text-base dark:text-zinc-200'>foto: {photo.author}</h4>
                                                     </a>
                                                 </div>
                                             </motion.div>
