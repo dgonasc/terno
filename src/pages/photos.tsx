@@ -19,7 +19,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function ModalPhotos(props: {photos: any}) {
+export default function NewPhotos(props: {photos: any}) {
   const photos = props.photos;
 
   const [data, setData] = useState({ image: '', id: 0});
@@ -139,6 +139,7 @@ export default function ModalPhotos(props: {photos: any}) {
                                           alt={photo.author}
                                           key={photo.id}
                                           className="z-40 w-full rounded-lg"
+                                          onClick={() =>  viewImage(photo.image, photo.id)}
                                       />
                                       <a className='absolute inset-0 z-0 duration-300 rounded-lg opacity-0 hover:opacity-100 hover:cursor-pointer '
                                           onClick={() =>  viewImage(photo.image, photo.id)}>
@@ -180,12 +181,12 @@ export default function ModalPhotos(props: {photos: any}) {
                               <div className='flex items-center justify-between max-lg:grid'>
                                 <Button
                                   onClick={() => imgAction('prev-img')}
-                                  className='p-3 bg-green-400 border-2 border-green-500 cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
+                                  className='p-4 text-sm bg-green-400 border-2 border-green-500 outline-none cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
                                     Anterior
                                 </Button>
                                 <Image
                                   src={data.image}
-                                  alt=''
+                                  alt='Fotos Terno do Binga'
                                   width={300}
                                   height={180}
                                   className='z-50 w-screen max-w-lg rounded-md'
@@ -193,7 +194,7 @@ export default function ModalPhotos(props: {photos: any}) {
                                 />
                                 <Button size='lg'
                                   onClick={() => imgAction('next-img')}
-                                  className='p-3 bg-green-400 border-2 border-green-500 cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
+                                  className='p-4 text-sm bg-green-400 border-2 border-green-500 cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
                                     Próxima
                                 </Button>
                                 </div>

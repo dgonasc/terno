@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import Image from 'next/image';
+import { Button } from "@material-tailwind/react";
 
 interface FormData {
   name: string;
@@ -81,7 +82,9 @@ export default function ContactForm() {
             placeholder='Mensagem'
             className='p-2 mt-3 border-2 border-yellow-200 rounded-lg dark:text-slate-200 h-36 w-72 border-opacity-60 placeholder:opacity-70 dark:bg-slate-900'
           />
-          <button type="submit" className='mx-20 mt-4 text-white uppercase rounded-lg bg-slate-500 dark:bg-slate-700 border-opacity-80 dark:text-gray-200'>Enviar</button>
+          <Button
+            type="submit"
+            className='flex items-center justify-center p-2 mx-20 mt-4 text-lg text-white rounded-lg bg-slate-500 dark:bg-slate-700 border-opacity-80 dark:text-gray-200'>Enviar</Button>
         </form>
       </div>
       <div>
