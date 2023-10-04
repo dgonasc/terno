@@ -46,7 +46,7 @@ export default function Download() {
                         <button className="ml-5 text-2xl dark:text-gray-700"><FiDownload /></button>
                     </div>
                 </div>
-                <div className="flex items-center justify-between px-8 py-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
+                <div className="flex items-center justify-between px-5 py-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
                     onClick={DownloadFotos}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_VERDIM.PNG"
@@ -55,7 +55,7 @@ export default function Download() {
                         height={60}
                         className="rounded-full"
                     />
-                    <div className="grid items-center justify-center mx-4">
+                    <div className="grid items-center justify-center mx-6">
                         <h2 className="text-2xl dark:text-gray-700">Fotos</h2>
                         <button className="ml-3 text-2xl dark:text-gray-700"><FiDownload /></button>
                     </div>
