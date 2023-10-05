@@ -22,7 +22,59 @@ export async function getStaticProps() {
 export default function NewPhotos(props: {photos: any}) {
   const photos = props.photos;
 
-  const [data, setData] = useState({ image: '', id: 0});
+  const navRef = useRef<HTMLElement | null>(null);
+  const [selectedAlbum, setSelectedAlbum] = useState("1");
+  const [clickedButtonId, setClickedButtonId] = useState("1");
+
+  //  Albums
+  // 1 - Humaitá
+  // 2 - Mestre Anderson Miguel
+  // 3 - Fanfarrice
+  // 4 - Avenidinha
+  // 5 - Outros
+  // 6 - Honks
+
+  function closeModal() {
+    setData({image: '', id: 0, transitioning: false});
+  };
+  const showPhotos = (albumId: string, buttonId: string) => {
+    navRef.current?.classList.add('hidden');
+    navRef.current?.classList.toggle('hidden');
+    setClickedButtonId(buttonId);
+    setSelectedAlbum(albumId);
+  };
+  const viewImage = ( image: string, id: number) => {
+    setData({ image, id, transitioning: false })
+  }
+
+  const imgAction = (action: string) => {
+    let id = data.id;
+    if (action === 'next-img') {
+      const nextId = id + 1;
+      const nextImage = filteredPhotos.find((photo: {id: number}) => photo.id === nextId);
+
+      if (nextImage) {
+        // Use Framer Motion to smoothly transition to the next image
+        setData({ image: nextImage.image, id: nextId, transitioning: true });
+        setTimeout(() => {
+          setData({ image: nextImage.image, id: nextId, transitioning: false });
+        }, 300); // Adjust the duration as needed
+      }
+    } else if (action === 'prev-img') {
+      const prevId = id - 1;
+      const prevImage = filteredPhotos.find((photo: {id: number}) => photo.id === prevId);
+
+      if (prevImage) {
+        // Use Framer Motion to smoothly transition to the previous image
+        setData({ image: prevImage.image, id: prevId, transitioning: true });
+        setTimeout(() => {
+          setData({ image: prevImage.image, id: prevId, transitioning: false });
+        }, 300); // Adjust the duration as needed
+      }
+    }
+  };
+
+  const [data, setData] = useState({ image: '', id: 0, transitioning: false});
   const [isTouching, setIsTouching] = useState(false);
   const [startX, setStartX] = useState(0);
 
@@ -50,56 +102,9 @@ export default function NewPhotos(props: {photos: any}) {
     setIsTouching(false);
   };
 
-
-  function closeModal() {
-    setData({image: '', id: 0});
-  }
-
-  const navRef = useRef<HTMLElement | null>(null);
-  const [selectedAlbum, setSelectedAlbum] = useState("1");
-  const [clickedButtonId, setClickedButtonId] = useState("1");
-
-      //  Albums
-      // 1 - Humaitá
-      // 2 - Mestre Anderson Miguel
-      // 3 - Fanfarrice
-      // 4 - Avenidinha
-      // 5 - Outros
-      // 6 - Honks
-
-  const showPhotos = (albumId: string, buttonId: string) => {
-    navRef.current?.classList.add('hidden');
-    navRef.current?.classList.toggle('hidden');
-    setClickedButtonId(buttonId);
-    setSelectedAlbum(albumId);
-};
-
   const filteredPhotos = photos.filter((photo: { id: Key | null | undefined; image: string; description: string, author: string, album: any }) => {
     return photo.album === selectedAlbum;
   });
-
-  const viewImage = ( image: string, id: number) => {
-      setData({ image, id })
-  }
-
-  const imgAction = (action: string) => {
-    let id = data.id;
-    if (action === 'next-img') {
-      const nextId = id + 1;
-      const nextImage = filteredPhotos.find((photo: { id: number }) => photo.id === nextId);
-
-      if (nextImage) {
-        setData({ image: nextImage.image, id: nextId });
-      }
-    } else if (action === 'prev-img') {
-      const prevId = id - 1;
-      const prevImage = filteredPhotos.find((photo: { id: number }) => photo.id === prevId);
-
-      if (prevImage) {
-        setData({ image: prevImage.image, id: prevId });
-      }
-    }
-  };
 
     return (
         <div>
@@ -195,7 +200,7 @@ export default function NewPhotos(props: {photos: any}) {
                       </Transition.Child>
                       <div className="fixed inset-0 overflow-y-auto">
                         <div className="z-20 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
-                        <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 outline-none right-5 top-20 dark:border-green-800 dark:bg-green-700'>X</Button>
+                        <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 outline-none right-5 top-5 dark:border-green-800 dark:bg-green-700'>X</Button>
                           <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
