@@ -6,7 +6,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
 import Head from "next/head"
-import { MotionConfig, motion } from 'framer-motion';
+import { MotionConfig, AnimatePresence, motion } from 'framer-motion';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { Button } from "@material-tailwind/react";
 
@@ -89,10 +89,10 @@ export default function NewPhotos(props: {photos: any}) {
     const currentX = e.touches[0].clientX;
     const deltaX = currentX - startX;
 
-    if (deltaX > 50) {
+    if (deltaX > 100) {
       imgAction('prev-img');
       setIsTouching(false);
-    } else if (deltaX < -50) {
+    } else if (deltaX < -100) {
       imgAction('next-img');
       setIsTouching(false);
     }
@@ -210,7 +210,7 @@ export default function NewPhotos(props: {photos: any}) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                             >
-                            <Dialog.Panel className="w-screen max-w-lg transition-all lg:max-w-3xl rounded-2xl">
+                            {/* <Dialog.Panel className="w-screen max-w-lg transition-all lg:max-w-3xl rounded-2xl">
                               <div className='flex items-center justify-between max-lg:grid'>
                                 <Button
                                   onClick={() => imgAction('prev-img')}
@@ -234,7 +234,54 @@ export default function NewPhotos(props: {photos: any}) {
                                     Próxima
                                 </Button>
                                 </div>
-                          </Dialog.Panel>
+                          </Dialog.Panel> */}
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.8 }}
+                          >
+                            <Dialog.Panel className="w-screen max-w-lg lg:max-w-3xl rounded-2xl">
+                              <motion.div
+                                className="flex items-center justify-between max-lg:grid"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.8 }}
+                                >
+                                <Button
+                                  onClick={() => imgAction('prev-img')}
+                                  className="hidden p-4 text-sm bg-green-400 border-2 border-green-500 outline-none cursor-pointer lg:flex max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700"
+                                >
+                                  Anterior
+                                </Button>
+                                <motion.div
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  exit={{ opacity: 0 }}
+                                  onTouchStart={handleTouchStart}
+                                  onTouchMove={handleTouchMove}
+                                  onTouchEnd={handleTouchEnd}
+                                >
+                                  <Image
+                                    src={data.image}
+                                    alt="Fotos Terno do Binga"
+                                    width={300}
+                                    height={180}
+                                    className="z-50 w-screen max-w-lg rounded-md shadow-2xl"
+                                    onClick={closeModal}
+
+                                  />
+                                </motion.div>
+                                <Button
+                                  onClick={() => imgAction('next-img')}
+                                  className="hidden p-4 text-sm bg-green-400 border-2 border-green-500 cursor-pointer lg:flex max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700"
+                                >
+                                  Próxima
+                                </Button>
+                              </motion.div>
+                            </Dialog.Panel>
+                          </motion.div>
                         </Transition.Child>
                       </div>
                     </div>
