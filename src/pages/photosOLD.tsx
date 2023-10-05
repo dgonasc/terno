@@ -21,7 +21,7 @@ export async function getStaticProps() {
     }
 }
 
-function ModalPhotos(props: { photos: any }) {
+export default function ModalPhotos(props: { photos: any }) {
     const photos = props.photos;
     const [isOpen, setIsOpen] = useState("");
 
