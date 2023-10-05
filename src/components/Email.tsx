@@ -49,6 +49,9 @@ export default function ContactForm() {
         // An error occurred while sending the email
         console.error('Error:', error);
       }
+    } else {
+      // Failed to send email
+      toast.error("This didn't work.")
     }
   };
 
