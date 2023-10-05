@@ -120,7 +120,7 @@ export default function NewPhotos(props: {photos: any}) {
           <div className='border-separate '>
             <div>
               <nav ref={navRef} className="mb-24 ">
-                <div className="mx-8 cursor-pointer columns-2 sm:columns-4 lg:columns-5">
+                <div className="cursor-pointer lg:mx-8 columns-2 sm:columns-4 lg:columns-5">
                       <div>
                           {filteredPhotos.map((photo: { id: number; image: string; description: string, author: string, album: any }) => (
                               <div key={photo.id}>
@@ -168,6 +168,7 @@ export default function NewPhotos(props: {photos: any}) {
                       </Transition.Child>
                       <div className="fixed inset-0 overflow-y-auto">
                         <div className="z-20 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
+                        <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 right-5 top-20 dark:border-green-800 dark:bg-green-700'>X</Button>
                           <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -177,11 +178,11 @@ export default function NewPhotos(props: {photos: any}) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                             >
-                            <Dialog.Panel className="w-full max-w-lg transition-all lg:max-w-3xl rounded-2xl">
+                            <Dialog.Panel className="w-screen max-w-lg transition-all lg:max-w-3xl rounded-2xl">
                               <div className='flex items-center justify-between max-lg:grid'>
                                 <Button
                                   onClick={() => imgAction('prev-img')}
-                                  className='p-4 text-sm bg-green-400 border-2 border-green-500 outline-none cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
+                                  className='hidden p-4 text-sm bg-green-400 border-2 border-green-500 outline-none cursor-pointer lg:flex max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
                                     Anterior
                                 </Button>
                                 <Image
@@ -189,12 +190,12 @@ export default function NewPhotos(props: {photos: any}) {
                                   alt='Fotos Terno do Binga'
                                   width={300}
                                   height={180}
-                                  className='z-50 w-screen max-w-lg rounded-md'
+                                  className='z-50 w-screen max-w-lg rounded-md shadow-2xl'
                                   onClick={closeModal}
                                 />
-                                <Button size='lg'
+                                <Button
                                   onClick={() => imgAction('next-img')}
-                                  className='p-4 text-sm bg-green-400 border-2 border-green-500 cursor-pointer max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
+                                  className='hidden p-4 text-sm bg-green-400 border-2 border-green-500 cursor-pointer lg:flex max-lg:mx-44 max-lg:my-2 dark:border-green-800 dark:bg-green-700'>
                                     Próxima
                                 </Button>
                                 </div>
