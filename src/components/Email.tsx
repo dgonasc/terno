@@ -25,33 +25,34 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if(formData != null) {
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
 
-        if (response.ok) {
-          // Email sent successfully
-          toast.success('E-mail enviado!');
+    if (!formData.name || !formData.email || !formData.message) {
+      // Display an error message or take appropriate action
+      toast.error('Por favor preencha os campos necessários');
+      return;
+    }
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-          // Clear the form fields after successful submission
-          setFormData(initialFormData);
-        } else {
-          // Failed to send email
-          toast.error("This didn't work.")
-        }
-      } catch (error) {
-        // An error occurred while sending the email
-        console.error('Error:', error);
+      if (response.ok) {
+        // Email sent successfully
+        toast.success('E-mail enviado!');
+
+        // Clear the form fields after successful submission
+        setFormData(initialFormData);
+      } else {
+        // Failed to send email
+        toast.error("E-mail não enviado")
       }
-    } else {
-      // Failed to send email
-      toast.error("This didn't work.")
+    } catch (error) {
+      // An error occurred while sending the email
+      console.error('Error:', error);
     }
   };
 
