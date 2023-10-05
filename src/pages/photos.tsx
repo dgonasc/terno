@@ -1,4 +1,4 @@
-import React, { Key, Fragment, useState, useRef } from 'react'
+import React, { Key, Fragment, useState, useRef, useEffect, useCallback } from 'react'
 import fsPromises from 'fs/promises';
 import path from 'path';
 import Image from 'next/image';
@@ -44,7 +44,8 @@ export default function NewPhotos(props: {photos: any}) {
     setSelectedAlbum(albumId);
   };
   const viewImage = ( image: string, id: number) => {
-    setData({ image, id, transitioning: false })
+    setData({ image, id, transitioning: false });
+    setSelectedPhotoIndex(id);
   }
 
   const imgAction = (action: string) => {
@@ -101,6 +102,28 @@ export default function NewPhotos(props: {photos: any}) {
   const handleTouchEnd = () => {
     setIsTouching(false);
   };
+
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const handleKeyboardEvents = useCallback(
+    (e: KeyboardEvent) => {
+      if (selectedPhotoIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          imgAction('prev-img');
+        } else if (e.key === 'ArrowRight') {
+          imgAction('next-img');
+        }
+      }
+    },
+    [selectedPhotoIndex, imgAction]
+  );
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyboardEvents);
+    return () => {
+      window.removeEventListener('keydown', handleKeyboardEvents);
+    };
+  }, [handleKeyboardEvents]);
+
 
   const filteredPhotos = photos.filter((photo: { id: Key | null | undefined; image: string; description: string, author: string, album: any }) => {
     return photo.album === selectedAlbum;
@@ -213,12 +236,7 @@ export default function NewPhotos(props: {photos: any}) {
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                       >
-                        <Dialog.Panel className="relative w-screen max-w-lg mt-8 transition-all lg:max-w-3xl rounded-2xl">
-                          <Button
-                            onClick={closeModal}
-                            className='absolute right-0 hidden transition-all bg-green-400 border-2 border-green-500 outline-none -top-10 max-lg:flex dark:border-green-800 dark:bg-green-700'>
-                              X
-                          </Button>
+                        <Dialog.Panel className="w-screen max-w-lg transition-all lg:max-w-3xl rounded-2xl">
                           <div className='flex items-center justify-between max-lg:grid'>
                             <Button
                               onClick={() => imgAction('prev-img')}
