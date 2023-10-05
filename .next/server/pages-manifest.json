@@ -8,7 +8,8 @@
   "/links": "pages/links.html",
   "/search": "pages/search.html",
   "/_error": "pages/_error.js",
-  "/photosOLD": "pages/photosOLD.js",
   "/about": "pages/about.js",
-  "/photos": "pages/photos.js"
+  "/photosOLD": "pages/photosOLD.js",
+  "/photos": "pages/photos.js",
+  "/photosSlide": "pages/photosSlide.js"
 }

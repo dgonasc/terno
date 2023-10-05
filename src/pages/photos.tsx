@@ -23,6 +23,33 @@ export default function NewPhotos(props: {photos: any}) {
   const photos = props.photos;
 
   const [data, setData] = useState({ image: '', id: 0});
+  const [isTouching, setIsTouching] = useState(false);
+  const [startX, setStartX] = useState(0);
+
+  const handleTouchStart = (e: any) => {
+    setIsTouching(true);
+    setStartX(e.touches[0].clientX ?? 0);
+  };
+
+  const handleTouchMove = (e: any) => {
+    if (!isTouching) return;
+
+    const currentX = e.touches[0].clientX;
+    const deltaX = currentX - startX;
+
+    if (deltaX > 50) {
+      imgAction('prev-img');
+      setIsTouching(false);
+    } else if (deltaX < -50) {
+      imgAction('next-img');
+      setIsTouching(false);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsTouching(false);
+  };
+
 
   function closeModal() {
     setData({image: '', id: 0});
@@ -168,7 +195,7 @@ export default function NewPhotos(props: {photos: any}) {
                       </Transition.Child>
                       <div className="fixed inset-0 overflow-y-auto">
                         <div className="z-20 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
-                        <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 right-5 top-20 dark:border-green-800 dark:bg-green-700'>X</Button>
+                        <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 outline-none right-5 top-20 dark:border-green-800 dark:bg-green-700'>X</Button>
                           <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -192,6 +219,9 @@ export default function NewPhotos(props: {photos: any}) {
                                   height={180}
                                   className='z-50 w-screen max-w-lg rounded-md shadow-2xl'
                                   onClick={closeModal}
+                                  onTouchStart={handleTouchStart}
+                                  onTouchMove={handleTouchMove}
+                                  onTouchEnd={handleTouchEnd}
                                 />
                                 <Button
                                   onClick={() => imgAction('next-img')}
@@ -213,4 +243,4 @@ export default function NewPhotos(props: {photos: any}) {
           <Footer />
         </div>
     )
-}
+};
