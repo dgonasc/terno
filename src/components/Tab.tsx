@@ -39,15 +39,15 @@ interface TabProps {
     return (
         <>
             <h1 className='flex justify-center m-4 mt-10 text-4xl lg:text-6xl dark:text-gray-300'>Pesquisa</h1>
-            <div className='grid m-2 mt-8 lg:flex'>
-                <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-lg:grid-flow-col max-lg:grid-rows-2 lg:ml-8 xl:ml-24 xl:basis-2/5 2xl:basis-1/6 basis-3/5'>
+            <div className='grid m-2 mt-8 xl:flex'>
+                <div className='grid items-center justify-center gap-2 mb-8 cursor-pointer max-xl:grid-flow-col max-lg:grid-rows-2 lg:mx-8 xl:ml-24 xl:basis-2/5 2xl:basis-1/6 basis-3/5'>
                     {tabs.map((tab, index) => (
                     <button className="flex items-center justify-center w-auto h-20 gap-2 my-1 overflow-hidden bg-white border-2 border-green-500 border-opacity-20 rounded-xl lg:h-36 max-sm:w-36 max-lg:w-48"
                         key={index}
                         onClick={() => handleTabClick(index)}
                         style={{backgroundColor: activeTab === index ? '#4ade80' : 'white'}}
                     >
-                        <div className='items-center justify-center hidden w-1/3 my-2 bg-cover lg:flex rounded-xl bg-landscape'>
+                        <div className='items-center justify-center hidden w-1/3 my-2 bg-cover xl:flex rounded-xl bg-landscape'>
                             <Image
                             src={tab.imageMain}
                             alt='Foto pesquisa'
