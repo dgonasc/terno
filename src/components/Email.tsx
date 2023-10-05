@@ -25,29 +25,30 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if(formData != null) {
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+        if (response.ok) {
+          // Email sent successfully
+          toast.success('E-mail enviado!');
 
-      if (response.ok) {
-        // Email sent successfully
-        toast.success('E-mail enviado!');
-
-        // Clear the form fields after successful submission
-        setFormData(initialFormData);
-      } else {
-        // Failed to send email
-        toast.error("This didn't work.")
+          // Clear the form fields after successful submission
+          setFormData(initialFormData);
+        } else {
+          // Failed to send email
+          toast.error("This didn't work.")
+        }
+      } catch (error) {
+        // An error occurred while sending the email
+        console.error('Error:', error);
       }
-    } catch (error) {
-      // An error occurred while sending the email
-      console.error('Error:', error);
     }
   };
 
@@ -84,7 +85,9 @@ export default function ContactForm() {
           />
           <Button
             type="submit"
-            className='flex items-center justify-center p-2 mx-20 mt-4 text-lg text-white rounded-lg bg-slate-500 dark:bg-slate-700 border-opacity-80 dark:text-gray-200'>Enviar</Button>
+            className='flex items-center justify-center p-2 mx-20 mt-4 text-lg text-white rounded-lg bg-slate-500 dark:bg-slate-700 border-opacity-80 dark:text-gray-200'>
+              Enviar
+          </Button>
         </form>
       </div>
       <div>
