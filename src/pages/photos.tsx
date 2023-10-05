@@ -204,7 +204,6 @@ export default function NewPhotos(props: {photos: any}) {
                   </Transition.Child>
                   <div className="fixed inset-0 overflow-y-auto">
                     <div className="z-20 flex items-center justify-center min-h-full p-4 text-center bg-gray-100 dark:bg-slate-500 dark:bg-opacity-40 bg-opacity-40">
-                      <Button onClick={closeModal} className='fixed transition-all bg-green-400 border-2 border-green-500 outline-none right-5 top-5 dark:border-green-800 dark:bg-green-700'>X</Button>
                       <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -214,7 +213,12 @@ export default function NewPhotos(props: {photos: any}) {
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                       >
-                        <Dialog.Panel className="w-screen max-w-lg transition-all lg:max-w-3xl rounded-2xl">
+                        <Dialog.Panel className="relative w-screen max-w-lg mt-8 transition-all lg:max-w-3xl rounded-2xl">
+                          <Button
+                            onClick={closeModal}
+                            className='absolute right-0 hidden transition-all bg-green-400 border-2 border-green-500 outline-none -top-10 max-lg:flex dark:border-green-800 dark:bg-green-700'>
+                              X
+                          </Button>
                           <div className='flex items-center justify-between max-lg:grid'>
                             <Button
                               onClick={() => imgAction('prev-img')}
