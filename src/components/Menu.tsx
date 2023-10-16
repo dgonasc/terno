@@ -40,7 +40,7 @@ export default function Menu() {
                             </Link>
                         </motion.button>
                     </div>
-                    <nav ref={navRef} onClick={showNavBar} className="text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-white dark:max-lg:bg-slate-900 dark:max-lg:bg-opacity-50 max-lg:w-screen max-lg:h-screen lg:flex">
+                    <nav ref={navRef} onClick={showNavBar} className="my-5 text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-white dark:max-lg:bg-slate-900 dark:max-lg:bg-opacity-50 max-lg:w-screen max-lg:h-screen lg:flex">
                         <MotionConfig transition={{ duration: 1 }}>
                             <motion.div
                                 animate={{ y: 80 }}
@@ -62,11 +62,11 @@ export default function Menu() {
                                             fotos
                                         </Link>
                                     </li>
-                                    <li className="max-lg:pb-3">
+                                    {/* <li className="max-lg:pb-3">
                                         <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/search">
                                             pesquisa
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li className="max-lg:pb-3">
                                         <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/download">
                                             downloads
