@@ -4,6 +4,7 @@ import { Noto_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Toaster } from 'react-hot-toast'
 import { ThemeProvider } from "next-themes"
+import { Analytics } from '@vercel/analytics/react';
 
 const xilosa = localFont({
   src: '../styles/fonts/xilosa_.woff2',
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Toaster position="bottom-center" reverseOrder={false}/>
     <ThemeProvider enableSystem={true} attribute="class">
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   </main>
   )
