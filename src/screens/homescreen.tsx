@@ -29,7 +29,7 @@ export default function HomeScreen() {
     // const [isOpen4, setIsOpen4] = useState(false);
 
     return (
-        <>
+        <div className="bg-white dark:bg-slate-900">
             <div className="grid items-start justify-center m-1 bg-gray-50 bg-opacity-80 dark:bg-slate-800">
                 <div className="my-8 max-sm:my-1 max-sm:mb-8 lg:mb-16 lg:mx-36 font-noto">
                     <h3 className="m-5 mx-12 text-4xl max-sm:mx-8 max-sm:mt-8 xl:text-6xl font-xilosa drop-shadow-xl dark:text-gray-300 lg:text-6xl">Terno do Binga</h3>
@@ -166,6 +166,6 @@ export default function HomeScreen() {
             <ContactForm />
 
             <Footer />
-        </>
+        </div>
     )
 }

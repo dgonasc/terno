@@ -142,7 +142,7 @@ export default function NewPhotos(props: {photos: any}) {
           <title>Fotos - Terno do Binga</title>
       </Head>
       <Menu />
-      <div>
+      <div className='bg-white dark:bg-slate-900'>
         <h1 className='flex justify-center m-4 mt-8 text-4xl 2xl:m-12 lg:text-6xl dark:text-zinc-300'>Fotos</h1>
         <nav className='grid items-center justify-center grid-cols-2 mx-10 xl:mb-14 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
             <button onClick={() => showPhotos("1", "1")} id='1' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>

@@ -5,7 +5,7 @@ import Script from 'next/script'
 
 export default function Home () {
   return (
-    <>
+    <div className="bg-white dark:bg-slate-900">
       <Head>
         <title>Terno do Binga</title>
       </Head>
@@ -23,6 +23,6 @@ export default function Home () {
       </div>
       <Menu />
       <HomeScreen />
-    </>
+    </div>
     )
 }

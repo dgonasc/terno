@@ -22,7 +22,7 @@ export async function getStaticProps() {
 export default function About(props: { about: any; }) {
     const about = props.about;
     return (
-        <>
+        <div className="bg-white dark:bg-slate-900">
             <Head>
                 <title>Sobre - Terno do Binga</title>
             </Head>
@@ -54,6 +54,6 @@ export default function About(props: { about: any; }) {
             </div>
 
             <Footer />
-        </>
+        </div>
     )
 }
