@@ -21,7 +21,7 @@ const noto = Noto_Sans({
 
 export default function App({ Component, pageProps }: AppProps) {
   return(
-  <main className={`${noto.variable} font-noto ${xilosa.variable} font-xilosa bg-white dark:bg-slate-900`}>
+  <main className={`${noto.variable} font-noto ${xilosa.variable} font-xilosa bg-white dark:bg-slate-900 duration-100`}>
     <Toaster position="bottom-center" reverseOrder={false}/>
     <ThemeProvider enableSystem={true} attribute="class">
       <Component {...pageProps} />

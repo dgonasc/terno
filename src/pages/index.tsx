@@ -5,7 +5,7 @@ import Script from 'next/script'
 
 export default function Home () {
   return (
-    <div className="bg-white dark:bg-slate-900">
+    <div className="duration-100 bg-white dark:bg-slate-900">
       <Head>
         <title>Terno do Binga</title>
       </Head>
