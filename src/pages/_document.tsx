@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en" className='duration-100 bg-white dark:bg-slate-900'>
+    <Html lang="en">
       <Head>
         <link rel='shortcurt icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
         <meta name="og:locale" content="pt_BR"/>
@@ -21,7 +21,7 @@ export default function Document() {
         <meta property="language" content="Portuguese"/>
         <meta charSet="UTF-8"/>
       </Head>
-      <body className='duration-100 bg-white dark:bg-slate-900'>
+      <body className='bg-white dark:bg-slate-900'>
         <Main />
         <NextScript />
       </body>
