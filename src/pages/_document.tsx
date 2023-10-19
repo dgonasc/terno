@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="google-site-verification" content="sImydNS1uqjQWkfWg9iABvhIVoZasOe9ohx_VL4l1is" />
         <link rel='shortcurt icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
         <meta name="og:locale" content="pt_BR"/>
         <meta name="theme-color" content="#4ade80"/>
