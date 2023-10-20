@@ -45,8 +45,8 @@ export default function About(props: { about: any; }) {
                     <Image
                         src='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/terno_do_bing_05fev2023-54%400.5x.png'
                         alt='Foto sobre'
-                        width={720}
-                        height={480}
+                        width={1080}
+                        height={720}
                         className="relative w-full mt-16 border-2 border-yellow-400 rounded-lg shadow-md opacity-90 shadow-black"
                     />
                     <h3 className="mt-2 mb-10 ml-4 text-xs text-gray-600 lg:text-sm lg:mr-4 dark:text-gray-300">Foto: @luciano.baeta</h3>

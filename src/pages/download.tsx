@@ -8,7 +8,7 @@ export default function Download() {
 
     function DownloadRelease() {
         const link = document.createElement("a")
-        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Apresentacao.pdf"
+        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/files/release_Binga.pdf"
         link.target = "_blank"
         document.body.appendChild(link)
         link.click()
@@ -32,7 +32,7 @@ export default function Download() {
             <Menu />
             <h1 className='flex justify-center m-4 mt-10 text-4xl lg:text-6xl dark:text-gray-300'>Downloads</h1>
             <div className="grid items-center justify-center m-4 sm:flex">
-                {/* <div className="flex items-center justify-between px-5 py-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
+                <div className="flex items-center justify-between px-5 py-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
                     onClick={DownloadRelease}>
                     <Image
                         src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/BINGA_AVATAR_AZUL.PNG"
@@ -45,7 +45,7 @@ export default function Download() {
                         <h2 className="text-2xl dark:text-gray-700 ">Release</h2>
                         <button className="ml-5 text-2xl dark:text-gray-700"><FiDownload /></button>
                     </div>
-                </div> */}
+                </div>
                 <div className="flex items-center justify-between px-5 py-2 m-2 mx-6 bg-yellow-200 border-2 border-yellow-200 rounded-lg cursor-pointer"
                     onClick={DownloadFotos}>
                     <Image
