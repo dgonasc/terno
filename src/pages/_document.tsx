@@ -16,6 +16,7 @@ export default function Document() {
           `}
         </Script>
         <link rel='shortcurt icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
+        <link rel="icon" href="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico" />
         <meta name="og:locale" content="pt_BR"/>
         <meta name="theme-color" content="#4ade80"/>
         <meta name="description" content="O Terno do Binga é uma orquestra diferente, inspirada nos ternos de Maracatu de Baque Solto e nas orquestras cirandeiras, do Frevo e o Coco Rural." />
