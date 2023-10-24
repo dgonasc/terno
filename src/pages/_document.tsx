@@ -15,7 +15,7 @@ export default function Document() {
             gtag('config', 'G-0V5X4EV531');
           `}
         </Script>
-        <link rel='shortcurt icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
+        <link rel='shortcut icon' href='https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico' />
         <link rel="icon" href="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/favicon.ico" />
         <meta name="og:locale" content="pt_BR"/>
         <meta name="theme-color" content="#4ade80"/>
