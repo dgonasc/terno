@@ -122,80 +122,36 @@ export default function Menu() {
                                     onMouseLeave={onMouseLeaveMenu}
                                     className=""
                                 >
-                                    { isHoveringMenu ? (
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
-                                            onClick={toggleMenu}
-                                        >
-                                            <Link href="/" className='p-5 px-10 text-green-500 text-7xl' >
-                                                início
-                                            </Link>
-                                        </motion.div>
-                                    ) : (
-                                        <Link href="/" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
-                                            início
-                                        </Link>
-                                    )}
+                                    <Link href="/" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
+                                        início
+                                    </Link>
                                 </div>
 
                                 <div
                                     onMouseEnter={onMouseEnterMenu2}
                                     onMouseLeave={onMouseLeaveMenu2}
                                 >
-                                    { isHoveringMenu2 ? (
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
-                                            onClick={toggleMenu}
-                                        >
-                                            <Link href="/about" className='p-5 px-10 text-green-500 text-7xl' >
-                                                sobre
-                                            </Link>
-                                        </motion.div>
-                                    ) : (
-                                        <Link href="/about" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
-                                            sobre
-                                        </Link>
-                                    )}
+                                    <Link href="/about" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
+                                        sobre
+                                    </Link>
                                 </div>
 
                                 <div
                                     onMouseEnter={onMouseEnterMenu3}
                                     onMouseLeave={onMouseLeaveMenu3}
                                 >
-                                    { isHoveringMenu3 ? (
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
-                                            onClick={toggleMenu}
-                                        >
-                                            <Link href="/photos" className='p-5 px-10 text-green-500 text-7xl' >
-                                                fotos
-                                            </Link>
-                                        </motion.div>
-                                    ) : (
-                                        <Link href="/photos" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
-                                            fotos
-                                        </Link>
-                                    )}
+                                    <Link href="/photos" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
+                                        fotos
+                                    </Link>
                                 </div>
 
                                 <div
                                     onMouseEnter={onMouseEnterMenu4}
                                     onMouseLeave={onMouseLeaveMenu4}
                                 >
-                                    { isHoveringMenu4 ? (
-                                        <motion.div
-                                            whileTap={{ scale: 0.8 }}
-                                            onClick={toggleMenu}
-                                        >
-                                            <Link href="/download" className='p-5 px-10 text-green-500 text-7xl' >
-                                                downloads
-                                            </Link>
-                                        </motion.div>
-                                    ) : (
-                                        <Link href="/download" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
-                                            downloads
-                                        </Link>
-                                    )}
+                                    <Link href="/download" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
+                                        downloads
+                                    </Link>
                                 </div>
                             </div>
                             <div className="flex items-center justify-center max-lg:mt-12 lg:mb-8">
