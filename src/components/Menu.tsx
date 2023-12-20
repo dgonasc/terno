@@ -125,8 +125,9 @@ export default function Menu() {
                                     { isHoveringMenu ? (
                                         <motion.div
                                             whileTap={{ scale: 0.8 }}
+                                            onClick={toggleMenu}
                                         >
-                                            <Link href="/" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                            <Link href="/" className='p-5 px-10 text-green-500 text-7xl' >
                                                 início
                                             </Link>
                                         </motion.div>
@@ -144,8 +145,9 @@ export default function Menu() {
                                     { isHoveringMenu2 ? (
                                         <motion.div
                                             whileTap={{ scale: 0.8 }}
+                                            onClick={toggleMenu}
                                         >
-                                            <Link href="/about" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                            <Link href="/about" className='p-5 px-10 text-green-500 text-7xl' >
                                                 sobre
                                             </Link>
                                         </motion.div>
@@ -163,8 +165,9 @@ export default function Menu() {
                                     { isHoveringMenu3 ? (
                                         <motion.div
                                             whileTap={{ scale: 0.8 }}
+                                            onClick={toggleMenu}
                                         >
-                                            <Link href="/photos" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                            <Link href="/photos" className='p-5 px-10 text-green-500 text-7xl' >
                                                 fotos
                                             </Link>
                                         </motion.div>
@@ -182,8 +185,9 @@ export default function Menu() {
                                     { isHoveringMenu4 ? (
                                         <motion.div
                                             whileTap={{ scale: 0.8 }}
+                                            onClick={toggleMenu}
                                         >
-                                            <Link href="/download" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                            <Link href="/download" className='p-5 px-10 text-green-500 text-7xl' >
                                                 downloads
                                             </Link>
                                         </motion.div>
