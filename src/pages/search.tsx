@@ -1,8 +1,8 @@
 import React from 'react';
 import Tab from '../components/Tab';
-import Menu from '@/components/Menu';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
+import Menu from '@/components/Menu';
 
 const Search = () => {
 

@@ -1,8 +1,8 @@
 import Footer from "@/components/Footer";
-import Menu from "@/components/Menu";
 import { FiDownload } from "react-icons/fi";
 import Image from "next/image";
 import Head from "next/head"
+import Menu from "@/components/Menu";
 
 export default function Download() {
 

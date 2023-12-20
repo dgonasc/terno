@@ -3,13 +3,13 @@ import fsPromises from 'fs/promises';
 import path from 'path';
 import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
-import Menu from '@/components/Menu';
 import Footer from '@/components/Footer';
 import Head from "next/head"
 import { MotionConfig, motion } from 'framer-motion';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { IoArrowBack, IoArrowForward } from "react-icons/io5"
 import { Button } from "@material-tailwind/react";
+import Menu from '@/components/Menu';
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), '/src/JsonFiles/photos.json');

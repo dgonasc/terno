@@ -1,5 +1,4 @@
-import Menu from "@/components/Menu";
-import HomeScreen from "@/screens/homescreen";
+import HomeScreen from "@/pages/home";
 import Head from "next/head";
 import Script from 'next/script'
 
@@ -22,7 +21,6 @@ export default function Home () {
           `}
         </Script>
       </div>
-      <Menu />
       <HomeScreen />
     </div>
     )

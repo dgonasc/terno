@@ -1,118 +1,212 @@
-import { MotionConfig, motion } from "framer-motion"
-import Image from 'next/image'
-import React, { useRef, useState } from "react"
-import Link from "next/link"
+import Image from "next/image";
+import { CgMenuRight } from 'react-icons/cg';
+import Link from 'next/link';
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { SiYoutube, SiInstagram } from "react-icons/si";
 import { SlSocialSpotify } from "react-icons/sl"
 import { FiMail } from "react-icons/fi";
-import Headroom from 'react-headroom';
-
-
 
 export default function Menu() {
-    const navRef = useRef<HTMLElement | null>(null);
-    const showNavBar = () => {
-        navRef.current?.classList.toggle('max-lg:hidden');
+
+    const [open, setOpen] = useState(false);
+    const toggleMenu = () => {
+        setOpen((prevOpen) => !prevOpen)
     }
+    const MenuVars = {
+        initial: {
+            scaleY: 0,
+        },
+        animate: {
+            scaleY: 1,
+            transition: {
+                duration: 0.7,
+                ease: [0.12, 0, 0.39, 0],
+            }
+        },
+        exit: {
+            scaleY: 0,
+            transition: {
+                duration: 0.7,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1],
+            }
+        }
+    };
 
     const [isHovering, setIsHovered] = useState(false);
+    const onMouseEnter = () => setIsHovered(true);
+    const onMouseLeave = () => setIsHovered(false);
+
+    const [isHoveringMenu, setIsHoveredMenu] = useState(false);
+    const onMouseEnterMenu = () => setIsHoveredMenu(true);
+    const onMouseLeaveMenu = () => setIsHoveredMenu(false);
+
+    const [isHoveringMenu2, setIsHoveredMenu2] = useState(false);
+    const onMouseEnterMenu2 = () => setIsHoveredMenu2(true);
+    const onMouseLeaveMenu2 = () => setIsHoveredMenu2(false);
+
+    const [isHoveringMenu3, setIsHoveredMenu3] = useState(false);
+    const onMouseEnterMenu3 = () => setIsHoveredMenu3(true);
+    const onMouseLeaveMenu3 = () => setIsHoveredMenu3(false);
+
+    const [isHoveringMenu4, setIsHoveredMenu4] = useState(false);
+    const onMouseEnterMenu4 = () => setIsHoveredMenu4(true);
+    const onMouseLeaveMenu4 = () => setIsHoveredMenu4(false);
+
+    const MenuButtonMotion = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                delay: 0.3,
+                duration: 0.7,
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                delay: 0.3,
+                duration: 0.7,
+            }
+        },
+    }
 
     return (
-        <Headroom
-        style={{ zIndex: '4'}}
-        >
-            <div className="m-0 bg-white border-2 bg-opacity-90 dark:bg-slate-900 dark:border-t-black border-b-green-600 border-x-green-600 border-opacity-30 dark:border-opacity-20">
-                <div className='flex flex-row items-center justify-between lg:px-14 '>
-                    <div>
-                        <motion.button
-                        animate= {isHovering ? { scale: [1, 1.5, 1.5, 1, 1], rotate: [0, 0, 0, 0, 0] } : { scale: [1, 1, 1, 1, 1], rotate: [0, 0, 0, 0, 0] } }
+        <>
+            <div className="flex items-center justify-between m-4 ">
+                <Link href="/">
+                    <Image
+                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/cachorro_estrela.png"
+                        alt='Logo Terno do Binga'
+                        className='w-32 mt-1 mb-1 ml-8 rounded-full cursor-pointer lg:w-48 opacity-80'
+                        width={300}
+                        height={180}
+                    />
+                </Link>
+                <AnimatePresence>
+                    <motion.button
+                        className="m-10 mr-10 "
+                        onClick={toggleMenu}
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
+                        <motion.div
+                            className='text-7xl max-lg:text-6xl hover:text-green-500'
+                            variants={MenuButtonMotion}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            whileTap={{ scale: 0.8 }}
                         >
-                            <Link href="/">
-                                <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/logo-2.png"
-                                alt='Logo Terno do Binga'
-                                className='w-16 m-2 rounded-full lg:ml-4 lg:w-22 dark:invert-30 dark:invert'
-                                width={300}
-                                height={180}
-                                id='logo'
-                                onClick={() => setIsHovered(isHovering => !isHovering)}
-                                />
-                            </Link>
-                        </motion.button>
-                    </div>
-                    <nav ref={navRef} onClick={showNavBar} className="my-5 text-xl dark:text-zinc-300 max-lg:z-50 font-xilosa max-lg:text-5xl max-lg:-top-2 max-lg:bg-opacity-75 max-lg:mt-24 max-lg:absolute max-lg:hidden max-lg:justify-center max-lg:items-center max-lg:bg-white dark:max-lg:bg-slate-900 dark:max-lg:bg-opacity-50 max-lg:w-screen max-lg:h-screen lg:flex">
-                        <MotionConfig transition={{ duration: 1 }}>
-                            <motion.div
-                                animate={{ y: 80 }}
-                                transition={{ delay: 1 }}
-                            >
-                                <ul className="z-50 mr-8 lg:flex lg:items-center lg:-mt-16 lg:space-x-8 drop-shadow-sm shadow-black max-lg:ml-6 max-lg:space-y-4">
-                                    <li className="max-lg:pb-3">
-                                        <Link href="/" className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg">
+                            <CgMenuRight />
+                        </motion.div>
+                    </motion.button>
+                </AnimatePresence>
+            </div>
+            <AnimatePresence>
+                { open && (
+                    <motion.nav
+                        variants={MenuVars}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        className='z-40 origin-top'
+                    >
+                        <div className="grid justify-center w-screen py-10 pt-10 text-white bg-green-400 lg:pt-24 lg:h-80 rounded-b-xl">
+                            <div className="grid items-start lg:flex">
+                                <div
+                                    onMouseEnter={onMouseEnterMenu}
+                                    onMouseLeave={onMouseLeaveMenu}
+                                    className=""
+                                >
+                                    { isHoveringMenu ? (
+                                        <motion.div
+                                            whileTap={{ scale: 0.8 }}
+                                        >
+                                            <Link href="/" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                                início
+                                            </Link>
+                                        </motion.div>
+                                    ) : (
+                                        <Link href="/" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
                                             início
                                         </Link>
-                                    </li>
-                                    <li  className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/about">
+                                    )}
+                                </div>
+
+                                <div
+                                    onMouseEnter={onMouseEnterMenu2}
+                                    onMouseLeave={onMouseLeaveMenu2}
+                                >
+                                    { isHoveringMenu2 ? (
+                                        <motion.div
+                                            whileTap={{ scale: 0.8 }}
+                                        >
+                                            <Link href="/about" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                                sobre
+                                            </Link>
+                                        </motion.div>
+                                    ) : (
+                                        <Link href="/about" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
                                             sobre
                                         </Link>
-                                    </li>
-                                    <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/photos">
+                                    )}
+                                </div>
+
+                                <div
+                                    onMouseEnter={onMouseEnterMenu3}
+                                    onMouseLeave={onMouseLeaveMenu3}
+                                >
+                                    { isHoveringMenu3 ? (
+                                        <motion.div
+                                            whileTap={{ scale: 0.8 }}
+                                        >
+                                            <Link href="/photos" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                                fotos
+                                            </Link>
+                                        </motion.div>
+                                    ) : (
+                                        <Link href="/photos" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
                                             fotos
                                         </Link>
-                                    </li>
-                                    {/* <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/search">
-                                            pesquisa
-                                        </Link>
-                                    </li> */}
-                                    <li className="max-lg:pb-3">
-                                        <Link prefetch={false} className="max-lg:p-2 max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 drop-shadow-lg max-lg:rounded-lg" href="/download">
+                                    )}
+                                </div>
+
+                                <div
+                                    onMouseEnter={onMouseEnterMenu4}
+                                    onMouseLeave={onMouseLeaveMenu4}
+                                >
+                                    { isHoveringMenu4 ? (
+                                        <motion.div
+                                            whileTap={{ scale: 0.8 }}
+                                        >
+                                            <Link href="/download" className='p-5 px-10 text-green-500 text-7xl' onClick={toggleMenu}>
+                                                downloads
+                                            </Link>
+                                        </motion.div>
+                                    ) : (
+                                        <Link href="/download" className='p-5 px-10 text-7xl' onClick={toggleMenu}>
                                             downloads
                                         </Link>
-                                    </li>
-                                </ul>
-                            </motion.div>
-                        </MotionConfig>
-                        <MotionConfig transition={{ duration: 1 }}>
-                            <motion.div
-                                initial={{ y: -100 }}
-                                animate={{ y: 3 }}
-                                transition={{ delay: 1.5 }}
-                                className="flex items-center space-x-3 text-2xl max-lg:bg-yellow-300 dark:max-lg:bg-yellow-600 max-lg:bg-opacity-70 max-lg:absolute max-lg:ml-6 max-lg:justify-center max-lg:mt-24 lg:justify-center drop-shadow-md max-lg:p-2 max-lg:pl-4 max-lg:rounded-lg">
-                                    <a href='https://www.youtube.com/@TernoDoBinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiYoutube/></a>
-                                    <a href='https://instagram.com/ternodobinga' className='cursor-pointer drop-shadow-xl' target='blank'><SiInstagram/></a>
-                                    <a href="mailto: ternodobinga@gmail.com" className='cursor-pointer drop-shadow-xl'><FiMail/></a>
-                                    <a href="https://open.spotify.com/playlist/2zGY63Qd2wIlYDsv6Cz6kK?si=be82c06f88e04081" target="blank" className='cursor-pointer drop-shadow-xl'><SlSocialSpotify /></a>
-                                    <Image
-                                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha.png"
-                                        alt="Árvore com folhas vermelhas"
-                                        width={40}
-                                        height={15}
-                                        className="pl-2 drop-shadow-xl dark:hidden "
-                                    />
-                                    <Image
-                                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/ArvoreVermelha_darkMode.png"
-                                        alt="Árvore com folhas vermelhas"
-                                        width={40}
-                                        height={15}
-                                        className="hidden pl-2 drop-shadow-xl dark:flex"
-                                    />
-                            </motion.div>
-                        </MotionConfig>
-                    </nav>
-                    <Image
-                        onClick={showNavBar}
-                        src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/menu.png"
-                        alt='Menu mobile'
-                        className='static cursor-pointer w-14 top-8 lg:hidden dark:invert'
-                        width={120}
-                        height={90}
-                    />
-                </div>
-            </div>
-        </Headroom>
+                                    )}
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-center max-lg:mt-12 lg:mb-8">
+                                <a href='https://www.youtube.com/@TernoDoBinga' className='mx-5 text-4xl cursor-pointer hover:text-green-300 drop-shadow-xl' target='blank'><SiYoutube/></a>
+                                <a href='https://instagram.com/ternodobinga' className='mx-5 text-4xl cursor-pointer hover:text-green-300 drop-shadow-xl' target='blank'><SiInstagram/></a>
+                                <a href="mailto: ternodobinga@gmail.com" className='mx-5 text-4xl cursor-pointer hover:text-green-300 drop-shadow-xl'><FiMail/></a>
+                                <a href="https://open.spotify.com/playlist/2zGY63Qd2wIlYDsv6Cz6kK?si=be82c06f88e04081" target="blank" className='mx-5 text-4xl cursor-pointer hover:text-green-300 drop-shadow-xl'><SlSocialSpotify /></a>
+                            </div>
+                        </div>
+                    </motion.nav>
+                )}
+            </AnimatePresence>
+        </>
     )
 }
+
+
 

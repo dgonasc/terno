@@ -1,4 +1,3 @@
-import Menu from "@/components/Menu"
 import React from "react"
 import Image from "next/image"
 import Footer from "@/components/Footer"
@@ -8,6 +7,7 @@ import fsPromises from 'fs/promises';
 import path from 'path'
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 import Head from "next/head"
+import Menu from "@/components/Menu";
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), '/src/JsonFiles/about.json');
