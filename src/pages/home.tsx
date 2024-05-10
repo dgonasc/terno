@@ -32,7 +32,8 @@ export default function HomeScreen() {
                     >
                         { isHovering ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_yellow.png"
+                                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_yellow.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/cover_tazo/1X1A0066.png"
                                 alt="Art Yelow"
                                 width={200}
                                 height={200}
@@ -56,7 +57,8 @@ export default function HomeScreen() {
                     >
                         {isHovering2 ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_blue.png"
+                                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_blue.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/cover_tazo/1X1A0070.png"
                                 alt="Art Blue"
                                 width={200}
                                 height={200}
@@ -80,7 +82,8 @@ export default function HomeScreen() {
                     >
                         {isHovering3 ? (
                             <Image
-                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_pink.png"
+                                // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_pink.png"
+                                src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/cover_tazo/1X1A0201.png"
                                 alt="Art Yellow"
                                 width={200}
                                 height={200}
@@ -104,7 +107,8 @@ export default function HomeScreen() {
                         >
                             {isHovering4 ? (
                                 <Image
-                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_red.png"
+                                    // src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/Avatar_G_red.png"
+                                    src="https://terno-do-binga.s3.us-east-2.amazonaws.com/files/cover_tazo/1X1A0265.png"
                                     alt="Art Red"
                                     width={200}
                                     height={200}
