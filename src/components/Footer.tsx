@@ -5,7 +5,7 @@ export default function Footer() {
 
     return (
         <div className="fixed inset-x-0 bottom-0 flex items-center justify-between px-6 py-1 bg-gray-50 dark:bg-zinc-600">
-            <h3 className="ml-2 lg:text-sm font-xilosa dark:text-zinc-300 max-lg:text-xs">© Terno do Binga 2023</h3>
+            <h3 className="ml-2 lg:text-sm font-xilosa dark:text-zinc-300 max-lg:text-xs">© Terno do Binga 2024</h3>
             <MotionConfig>
                 <motion.div
                 initial={{ x: 100 }}
