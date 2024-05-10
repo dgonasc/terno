@@ -17,7 +17,7 @@ export default function Download() {
 
     function DownloadFotos() {
         const link = document.createElement("a")
-        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/download/Photos.zip"
+        link.href = "https://terno-do-binga.s3.us-east-2.amazonaws.com/download/Photos2024_%40bethfreitas.zip"
         link.target = "_blank"
         document.body.appendChild(link)
         link.click()
