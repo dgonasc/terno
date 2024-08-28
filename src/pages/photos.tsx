@@ -151,7 +151,7 @@ export default function NewPhotos(props: {photos: any}) {
                 <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
             </button>
             <button onClick={() => showPhotos("2", "2")} id='2' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "2" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
-                <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá - Carnaval</h3>
+                <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Humaitá Cultura</h3>
                 <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
             </button>
             <button onClick={() => showPhotos("3", "3")} id='3' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "3" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>

@@ -17,8 +17,8 @@ export default function HomeScreen() {
         <>
             <Menu />
             <div className="grid items-center justify-center text-center">
-                <h3 className="my-4 mt-8 text-5xl xl:my-8 xl:mt-16 xl:text-7xl font-xilosa drop-shadow-xl dark:text-gray-300 lg:text-6xl">Terno do Binga</h3>
-                <p className="mx-8 mb-10 text-xl xl:mx-56 opacity-60 xl:text-3xl">O Terno do Binga é fruto do encontro entre o efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as Culturas Populares Tradicionais brasileiras na cidade, resultando numa orquestra diferente, cuja maior inspiração são os Ternos de Maracatu de Baque Solto, as Cirandas da Zona da Mata Norte pernambucana e o Frevo, passando também por outras manifestações culturais, tais como o Coco Rural e o Bumba Boi Maranhense.</p>
+                <h3 className="my-4 mt-8 text-3xl xl:my-8 xl:mt-16 xl:text-7xl font-xilosa drop-shadow-xl dark:text-gray-300 lg:text-6xl">Orquestra Popular Terno do Binga</h3>
+                <p className="mx-8 mb-10 text-xl xl:mx-56 opacity-60 xl:text-3xl">A Orquestra Popular Terno do Binga é fruto do encontro entre o efervescente movimento das fanfarras belorizontinas e os grupos percussivos que pesquisam as Culturas Populares Tradicionais brasileiras na cidade, resultando numa orquestra diferente, cuja maior inspiração são as Cirandas da Zona da Mata Norte pernambucana e as Orquestras de Frevo de Olinda.</p>
             </div>
             <div className="my-2">{VideoHome()}</div>
             {/* Botões com Animação */}
