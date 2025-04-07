@@ -32,7 +32,7 @@ export default function NewPhotos(props: {photos: any}) {
   // 1 - Carnaval 2024
   // 2 - Humaitá
   // 3 - Mestre Anderson Miguel
-  // 4 - Avenidinha
+  // 4 - Carnaval 2025
   // 5 - Outros
   // 6 - Honks
   // 7 - Flyers
@@ -147,6 +147,10 @@ export default function NewPhotos(props: {photos: any}) {
         <h1 className='flex justify-center m-4 mt-8 text-4xl 2xl:m-12 lg:text-6xl dark:text-zinc-300'>Fotos</h1>
         <nav className='grid items-center justify-center grid-cols-2 mx-10 xl:mb-14 max-sm:mx-2 lg:grid-cols-3 2xl:grid-cols-4'>
             <button onClick={() => showPhotos("1", "1")} id='1' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "1" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
+                <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Carnaval 2025</h3>
+                <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
+            </button>
+            <button onClick={() => showPhotos("123", "123")} id='123' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "123" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                 <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Carnaval 2024</h3>
                 <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
             </button>
@@ -164,10 +168,6 @@ export default function NewPhotos(props: {photos: any}) {
             </button>
             <button onClick={() => showPhotos("6", "6")} id='6' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "6" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
                 <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Honk's</h3>
-                <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
-            </button>
-            <button onClick={() => showPhotos("4", "4")} id='8' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "4" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
-                <h3 className='lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs lg:ml-4 dark:text-zinc-300'>Buteco D'Avenidinha</h3>
                 <AiOutlineArrowDown className='ml-2 lg:ml-12 lg:text-sm xl:text-2xl 2xl:text-2xl max-sm:text-xs sm:ml-3 animate-bounce dark:text-zinc-300' />
             </button>
             <button onClick={() => showPhotos("7", "7")} id='7' className={`flex border-2 dark:border-slate-600 border-green-50 items-center justify-center p-1 2xl:p-5 mx-2 mb-4 rounded-lg  ${clickedButtonId === "7" ? 'dark:bg-green-700 bg-green-400' : "dark:bg-slate-600 bg-white"}`}>
